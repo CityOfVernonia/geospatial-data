@@ -4,18 +4,15 @@
     "title": "Special Flood Hazard Area"
   },
   "renderer": {
-    "type": "simple",
     "symbol": {
-      "type": "esriSFS",
-      "color": [255, 165, 0, 32],
+      "color": [255, 165, 0, 0.125],
       "outline": {
-        "type": "esriSLS",
-        "color": [255, 165, 0, 255],
-        "width": 1.5,
-        "style": "esriSLSSolid"
+        "color": [255, 165, 0],
+        "width": 1.5
       },
-      "style": "esriSFSSolid"
-    }
+      "type": "simple-fill"
+    },
+    "type": "simple"
   },
   "title": "Special Flood Hazard Area",
   "url": "https://cityofvernonia.github.io/geospatial-data/floodplain-management/special-flood-hazard-area.geojson"
