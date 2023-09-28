@@ -6,7 +6,7 @@ Datasets to support floodplain management.
 
 FEMA defines the SFHA as _the area that will be inundated by the flood event having a 1% chance of being equaled or exceeded in any given year_. The City of Vernonia SFHA also includes areas _that will be inundated by the flood event having a 0.2% chance of being equaled or exceeded in any given year_. Geospatially all Zone AE and Zone X (Shaded) within Vernonia City Limits.
 
-**GeoJSON:** [special-flood-hazard-area.geojson](special-flood-hazard-area.geojson) ([Preview](/preview.html?geojson=https%3A%2F%2Fcityofvernonia.github.io%2Fgeospatial-data%2Ffloodplain-management%2Fspecial-flood-hazard-area.json))
+**GeoJSON:** [special-flood-hazard-area.geojson](special-flood-hazard-area.geojson) ([Preview](../preview.html?geojson=https%3A%2F%2Fcityofvernonia.github.io%2Fgeospatial-data%2Ffloodplain-management%2Fspecial-flood-hazard-area.json))
 
 **GeoJSONLayer JSON:** [special-flood-hazard-area.json](special-flood-hazard-area.json)
 
