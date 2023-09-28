@@ -8,6 +8,7 @@ Along with each GeoJSON file is a same named JSON file containing the [ArcGIS Ma
 ](https://developers.arcgis.com/javascript/latest/) properties to initialize a [GeoJSONLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GeoJSONLayer.html) with the proper symbology, popup, labels, etc.
 
 ```typescript
+// typescript
 const specialFloodHazardArea = new GeoJSONLayer(
   await(
     await fetch(
@@ -16,6 +17,14 @@ const specialFloodHazardArea = new GeoJSONLayer(
     ),
   ).json(),
 );
+
+// javascript
+const request = await fetch(
+  'https://cityofvernonia.github.io/geospatial-data/floodplain-management/special-flood-hazard-area.json',
+  { cache: 'reload' },
+);
+const json = await request.json();
+const specialFloodHazardArea = new GeoJSONLayer(json);
 ```
 
 It's just that easy.
