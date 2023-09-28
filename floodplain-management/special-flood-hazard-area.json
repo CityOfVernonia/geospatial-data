@@ -1,4 +1,6 @@
 {
+  "copyright": "FEMA and City of Vernonia, Oregon",
+  "popupEnabled": false,
   "popupTemplate": {
     "content": "FEMA defines the SFHA as <i>the area that will be inundated by the flood event having a 1% chance of being equaled or exceeded in any given year</i>. The City of Vernonia SFHA also includes areas <i>that will be inundated by the flood event having a 0.2% chance of being equaled or exceeded in any given year</i>. Geospatially all Zone AE and Zone X (Shaded) within Vernonia City Limits.",
     "title": "Special Flood Hazard Area"
