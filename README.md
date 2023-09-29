@@ -1,5 +1,7 @@
 # City of Vernonia Geospatial Data
 
+![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/CityOfVernonia/geospatial-data?color=success&style=flat-square)
+
 Geospatial datasets for use in web applications to support of City business.
 
 ## Use
