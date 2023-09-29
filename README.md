@@ -33,7 +33,11 @@ It's just that easy.
 
 ### [Floodplain Management](floodplain-management)
 
-[Special Flood Hazard Area](floodplain-management/#special-flood-hazard-area)
+Datasets to support floodplain management.
+
+### [Record Surveys](record-surveys)
+
+Columbia County record surveys within the Vernonia spatial extent.
 
 ## Data Changes
 

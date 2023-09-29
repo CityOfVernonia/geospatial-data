@@ -1,2 +1,9 @@
+exclude:
+  - _data-processing
+  - Gemfile
+  - node_modules
+  - package.json
+  - package-lock.json
+
 plugins:
   - jemoji

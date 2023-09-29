@@ -1,4 +1,17 @@
 {
+  "type": "module",
+  "scripts": {
+    "record-surveys": "node _data-processing/record-surveys.js"
+  },
+  "dependencies": {
+    "@esri/arcgis-rest-feature-service": "^4.0.5",
+    "chalk": "^5.3.0",
+    "download": "^8.0.0",
+    "fs-extra": "^11.1.1",
+    "image-to-pdf": "^2.0.0",
+    "luxon": "^3.4.3",
+    "prettier": "^3.0.3"
+  },
   "prettier": {
     "semi": true,
     "singleQuote": true,

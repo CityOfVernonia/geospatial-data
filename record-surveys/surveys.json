@@ -1,0 +1,21 @@
+{
+  "copyright": "Columbia County, Oregon and City of Vernonia, Oregon",
+  "popupEnabled": true,
+  "popupTemplate": {
+    "content": "{SurveyId}",
+    "title": "{SurveyId}"
+  },
+  "renderer": {
+    "symbol": {
+      "color": [0, 0, 255, 0.125],
+      "outline": {
+        "color": [0, 0, 255, 0],
+        "width": 1.5
+      },
+      "type": "simple-fill"
+    },
+    "type": "simple"
+  },
+  "title": "Record Surveys",
+  "url": "https://cityofvernonia.github.io/geospatial-data/record-surveys/surveys.geojson"
+}
