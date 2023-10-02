@@ -41,6 +41,10 @@ Datasets to support floodplain management.
 
 Columbia County record surveys within the Vernonia spatial extent.
 
+### [Tax Maps](tax-maps)
+
+Columbia County tax maps within and adjacent to Vernonia City Limits.
+
 ## Data Changes
 
 See [Change Log](CHANGELOG).

@@ -23,10 +23,10 @@ Georeferenced tax maps can be viewed overlaid with imagery and and other layers 
   "type": "Feature",
   "geometry": {},
   "properties": {
-    "name": "4N 4W 3 BC",
-    "taxmap": "4403BC",
-    "county_url": "https://gis.columbiacountymaps.com/TaxMaps/4403BC.pdf",
-    "city_url": "https://cityofvernonia.github.io/vernonia-tax-maps/tax-maps/pdf/4403BC.pdf"
+    "name": "4N 4W 3",
+    "taxmap": "4403",
+    "county_url": "https://gis.columbiacountymaps.com/TaxMaps/4403.pdf",
+    "city_url": "https://cityofvernonia.github.io/geospatial-data/tax-maps/files/pdf/4403.pdf"
   }
 }
 ```
