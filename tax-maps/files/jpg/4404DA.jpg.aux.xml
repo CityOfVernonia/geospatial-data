@@ -1,0 +1,49 @@
+<PAMDataset>
+  <Metadata domain="IMAGE_STRUCTURE">
+    <MDI key="COMPRESSION">JPEG</MDI>
+    <MDI key="INTERLEAVE">PIXEL</MDI>
+    <MDI key="SOURCE_COLOR_SPACE">YCbCr</MDI>
+  </Metadata>
+  <Metadata domain="xml:ESRI" format="xml">
+    <GeodataXform xsi:type="typens:PolynomialXform" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:typens="http://www.esri.com/schemas/ArcGIS/2.9.0">
+      <PolynomialOrder>1</PolynomialOrder>
+      <SpatialReference xsi:type="typens:ProjectedCoordinateSystem">
+        <WKT>PROJCS["NAD_1983_2011_Oregon_Statewide_Lambert_Ft_Intl",GEOGCS["GCS_NAD_1983_2011",DATUM["D_NAD_1983_2011",SPHEROID["GRS_1980",6378137.0,298.257222101]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Lambert_Conformal_Conic"],PARAMETER["False_Easting",1312335.958005249],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",-120.5],PARAMETER["Standard_Parallel_1",43.0],PARAMETER["Standard_Parallel_2",45.5],PARAMETER["Latitude_Of_Origin",41.75],UNIT["Foot",0.3048],AUTHORITY["EPSG",6557]]</WKT>
+        <XOrigin>-118489100</XOrigin>
+        <YOrigin>-97381100</YOrigin>
+        <XYScale>37592196.316242374</XYScale>
+        <ZOrigin>-100000</ZOrigin>
+        <ZScale>10000</ZScale>
+        <MOrigin>-100000</MOrigin>
+        <MScale>10000</MScale>
+        <XYTolerance>0.0032808398950131233</XYTolerance>
+        <ZTolerance>0.001</ZTolerance>
+        <MTolerance>0.001</MTolerance>
+        <HighPrecision>true</HighPrecision>
+        <WKID>102970</WKID>
+        <LatestWKID>6557</LatestWKID>
+      </SpatialReference>
+      <SourceGCPs xsi:type="typens:ArrayOfDouble">
+        <Double>1798.0240854069566</Double>
+        <Double>-3824.9279008787375</Double>
+        <Double>9768.3656535236241</Double>
+        <Double>-3420.9792417086551</Double>
+        <Double>1871.296675578631</Double>
+        <Double>-1987.8631070740521</Double>
+        <Double>9888.4324174916255</Double>
+        <Double>-2934.2296962365508</Double>
+      </SourceGCPs>
+      <TargetGCPs xsi:type="typens:ArrayOfDouble">
+        <Double>629285.84772230405</Double>
+        <Double>1508161.2286366045</Double>
+        <Double>630614.6874109155</Double>
+        <Double>1508229.3887316398</Double>
+        <Double>629298.02554607182</Double>
+        <Double>1508467.7449922876</Double>
+        <Double>630634.73815894558</Double>
+        <Double>1508310.7873135773</Double>
+      </TargetGCPs>
+      <Name />
+    </GeodataXform>
+  </Metadata>
+</PAMDataset>
