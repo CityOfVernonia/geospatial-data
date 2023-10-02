@@ -50,7 +50,6 @@
         ]
       },
       "title": "Flood Zones",
-      "type": "geojson",
       "url": "https://cityofvernonia.github.io/geospatial-data/floodplain-management/flood-zones.geojson"
     },
     {
@@ -82,7 +81,6 @@
         "type": "simple"
       },
       "title": "Stream Profiles",
-      "type": "geojson",
       "url": "https://cityofvernonia.github.io/geospatial-data/floodplain-management/stream-profiles.geojson",
       "visible": false
     },
@@ -114,7 +112,6 @@
         "type": "simple"
       },
       "title": "Cross Sections",
-      "type": "geojson",
       "url": "https://cityofvernonia.github.io/geospatial-data/floodplain-management/cross-sections.geojson",
       "visible": false
     },
@@ -146,7 +143,6 @@
         "type": "simple"
       },
       "title": "Base Flood Elevations",
-      "type": "geojson",
       "url": "https://cityofvernonia.github.io/geospatial-data/floodplain-management/base-flood-elevations.geojson",
       "visible": false
     },
@@ -181,11 +177,9 @@
         "type": "simple"
       },
       "title": "Firm Panels",
-      "type": "geojson",
       "url": "https://cityofvernonia.github.io/geospatial-data/floodplain-management/firm-panels.geojson",
       "visible": false
     }
   ],
-  "title": "Flood Hazard",
-  "type": "group"
+  "title": "Flood Hazard"
 }
