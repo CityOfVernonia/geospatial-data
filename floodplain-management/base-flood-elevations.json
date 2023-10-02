@@ -1,0 +1,30 @@
+{
+  "labelingInfo": [
+    {
+      "labelExpressionInfo": { "expression": "$feature.bfe + \"'\"" },
+      "repeatLabel": false,
+      "symbol": {
+        "color": [255, 255, 255],
+        "font": {
+          "size": 8,
+          "weight": "bold"
+        },
+        "haloColor": [0, 0, 255],
+        "haloSize": 1,
+        "type": "text"
+      }
+    }
+  ],
+  "minScale": 7000,
+  "popupEnabled": false,
+  "renderer": {
+    "symbol": {
+      "color": [0, 0, 255],
+      "type": "simple-line",
+      "width": 1
+    },
+    "type": "simple"
+  },
+  "title": "Base Flood Elevations",
+  "url": "https://cityofvernonia.github.io/geospatial-data/floodplain-management/base-flood-elevations.geojson"
+}

@@ -1,0 +1,191 @@
+{
+  "layers": [
+    {
+      "copyright": "FEMA and City of Vernonia, Oregon",
+      "popupEnabled": false,
+      "renderer": {
+        "field": "description",
+        "type": "unique-value",
+        "uniqueValueInfos": [
+          {
+            "value": "Zone X - 0.2% annual inundation",
+            "symbol": {
+              "color": [230, 152, 0, 0.2],
+              "outline": {
+                "width": 0
+              },
+              "type": "simple-fill"
+            }
+          },
+          {
+            "value": "Zone A - 1% annual inundation",
+            "symbol": {
+              "color": [115, 178, 255, 0.2],
+              "outline": {
+                "width": 0
+              },
+              "type": "simple-fill"
+            }
+          },
+          {
+            "value": "Zone AE - 1% annual inundation",
+            "symbol": {
+              "color": [0, 92, 230, 0.2],
+              "outline": {
+                "width": 0
+              },
+              "type": "simple-fill"
+            }
+          },
+          {
+            "value": "Zone AE (Regulatory Floodway) - 1% annual inundation",
+            "symbol": {
+              "color": [255, 0, 0, 0.25],
+              "outline": {
+                "width": 0
+              },
+              "type": "simple-fill"
+            }
+          }
+        ]
+      },
+      "title": "Flood Zones",
+      "type": "geojson",
+      "url": "https://cityofvernonia.github.io/geospatial-data/floodplain-management/flood-zones.geojson"
+    },
+    {
+      "labelingInfo": [
+        {
+          "labelExpressionInfo": { "expression": "$feature.name" },
+          "repeatLabel": false,
+          "symbol": {
+            "color": [255, 255, 255],
+            "font": {
+              "size": 10,
+              "weight": "bold"
+            },
+            "haloColor": [0, 77, 168],
+            "haloSize": 1,
+            "type": "text"
+          }
+        }
+      ],
+      "minScale": 7000,
+      "popupEnabled": false,
+      "renderer": {
+        "symbol": {
+          "color": [0, 77, 168],
+          "style": "short-dash-dot-dot",
+          "type": "simple-line",
+          "width": 2
+        },
+        "type": "simple"
+      },
+      "title": "Stream Profiles",
+      "type": "geojson",
+      "url": "https://cityofvernonia.github.io/geospatial-data/floodplain-management/stream-profiles.geojson",
+      "visible": false
+    },
+    {
+      "labelingInfo": [
+        {
+          "labelExpressionInfo": { "expression": "$feature.section_id + \" (\" +$feature.bfe + \"')\"" },
+          "repeatLabel": false,
+          "symbol": {
+            "color": [255, 255, 255],
+            "font": {
+              "size": 8,
+              "weight": "bold"
+            },
+            "haloColor": [0, 0, 0],
+            "haloSize": 1,
+            "type": "text"
+          }
+        }
+      ],
+      "minScale": 7000,
+      "popupEnabled": false,
+      "renderer": {
+        "symbol": {
+          "color": [0, 0, 0],
+          "type": "simple-line",
+          "width": 1
+        },
+        "type": "simple"
+      },
+      "title": "Cross Sections",
+      "type": "geojson",
+      "url": "https://cityofvernonia.github.io/geospatial-data/floodplain-management/cross-sections.geojson",
+      "visible": false
+    },
+    {
+      "labelingInfo": [
+        {
+          "labelExpressionInfo": { "expression": "$feature.bfe + \"'\"" },
+          "repeatLabel": false,
+          "symbol": {
+            "color": [255, 255, 255],
+            "font": {
+              "size": 8,
+              "weight": "bold"
+            },
+            "haloColor": [0, 0, 255],
+            "haloSize": 1,
+            "type": "text"
+          }
+        }
+      ],
+      "minScale": 7000,
+      "popupEnabled": false,
+      "renderer": {
+        "symbol": {
+          "color": [0, 0, 255],
+          "type": "simple-line",
+          "width": 1
+        },
+        "type": "simple"
+      },
+      "title": "Base Flood Elevations",
+      "type": "geojson",
+      "url": "https://cityofvernonia.github.io/geospatial-data/floodplain-management/base-flood-elevations.geojson",
+      "visible": false
+    },
+    {
+      "labelingInfo": [
+        {
+          "labelExpressionInfo": {
+            "expression": "$feature.firm_panel + TextFormatting.NewLine + \"Eff. date: \" + $feature.effective_date"
+          },
+          "repeatLabel": false,
+          "symbol": {
+            "color": [0, 77, 168],
+            "font": {
+              "size": 10,
+              "weight": "bold"
+            },
+            "haloColor": [255, 255, 255],
+            "haloSize": 1,
+            "type": "text"
+          }
+        }
+      ],
+      "renderer": {
+        "symbol": {
+          "color": [0, 0, 0, 0],
+          "outline": {
+            "color": [0, 77, 168],
+            "width": 1.5
+          },
+          "type": "simple-fill"
+        },
+        "type": "simple"
+      },
+      "title": "Firm Panels",
+      "type": "geojson",
+      "url": "https://cityofvernonia.github.io/geospatial-data/floodplain-management/firm-panels.geojson",
+      "visible": false
+    }
+  ],
+  "title": "Flood Hazard",
+  "type": "group"
+}

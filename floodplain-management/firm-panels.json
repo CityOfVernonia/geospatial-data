@@ -1,0 +1,33 @@
+{
+  "labelingInfo": [
+    {
+      "labelExpressionInfo": {
+        "expression": "$feature.firm_panel + TextFormatting.NewLine + \"Eff. date: \" + $feature.effective_date"
+      },
+      "repeatLabel": false,
+      "symbol": {
+        "color": [0, 77, 168],
+        "font": {
+          "size": 10,
+          "weight": "bold"
+        },
+        "haloColor": [255, 255, 255],
+        "haloSize": 1,
+        "type": "text"
+      }
+    }
+  ],
+  "renderer": {
+    "symbol": {
+      "color": [0, 0, 0, 0],
+      "outline": {
+        "color": [0, 77, 168],
+        "width": 1.5
+      },
+      "type": "simple-fill"
+    },
+    "type": "simple"
+  },
+  "title": "Firm Panels",
+  "url": "https://cityofvernonia.github.io/geospatial-data/floodplain-management/firm-panels.geojson"
+}
