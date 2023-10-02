@@ -1,0 +1,31 @@
+{
+  "copyright": "Columbia County, Oregon and City of Vernonia, Oregon",
+  "labelingInfo": [
+    {
+      "labelExpressionInfo": { "expression": "$feature.name" },
+      "symbol": {
+        "color": [255, 255, 0],
+        "font": {
+          "size": 12
+        },
+        "haloColor": [255, 255, 0],
+        "haloSize": 1.5,
+        "type": "text"
+      }
+    }
+  ],
+  "popupEnabled": false,
+  "renderer": {
+    "symbol": {
+      "color": [0, 0, 0, 0],
+      "outline": {
+        "color": [255, 255, 0],
+        "width": 1.5
+      },
+      "type": "simple-fill"
+    },
+    "type": "simple"
+  },
+  "title": "Tax Map Boundaries",
+  "url": "https://cityofvernonia.github.io/geospatial-data/tax-maps/tax-map-boundaries.geojson"
+}

@@ -42,12 +42,6 @@ Check out the _Survey Search_ tool in [Vernonia Map](https://map.vernonia-or.gov
 
 [libtiff](http://www.libtiff.org/) available via the command line.
 
-### Install
-
-```shell
-npm install
-```
-
 ### Run
 
 ```shell

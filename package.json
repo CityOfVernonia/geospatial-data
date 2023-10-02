@@ -1,7 +1,9 @@
 {
   "type": "module",
   "scripts": {
-    "record-surveys": "node _data-processing/record-surveys.js"
+    "record-surveys": "node _data-processing/record-surveys.js",
+    "tax-map-boundaries": "node _data-processing/tax-map-boundaries.js",
+    "tax-maps": "node _data-processing/tax-maps.js"
   },
   "dependencies": {
     "@esri/arcgis-rest-feature-service": "^4.0.5",
