@@ -1,0 +1,70 @@
+{
+  "copyright": "FEMA and City of Vernonia, Oregon",
+  "labelingInfo": [
+    {
+      "labelExpressionInfo": {
+        "expression": "$feature.case_number + TextFormatting.NewLine + $feature.date"
+      },
+      "minScale": 24000,
+      "symbol": {
+        "color": [158, 85, 156],
+        "font": {
+          "size": 8
+        },
+        "haloColor": [255, 255, 255],
+        "haloSize": 1,
+        "type": "text"
+      }
+    }
+  ],
+  "popupEnabled": true,
+  "popupTemplate": {
+    "title": "{case_number}",
+    "content": [
+      {
+        "fieldInfos": [
+          {
+            "fieldName": "name",
+            "label": "Name"
+          },
+          {
+            "fieldName": "date",
+            "label": "Date"
+          },
+          {
+            "fieldName": "type",
+            "label": "Type"
+          },
+          {
+            "fieldName": "status",
+            "label": "Status"
+          },
+          {
+            "fieldName": "outcome",
+            "label": "Outcome"
+          },
+          {
+            "fieldName": "url",
+            "label": "Determination letter"
+          }
+        ],
+        "type": "fields"
+      }
+    ]
+  },
+  "renderer": {
+    "type": "simple",
+    "symbol": {
+      "color": [158, 85, 156],
+      "outline": {
+        "color": [255, 255, 255],
+        "width": 1.5
+      },
+      "size": 8,
+      "style": "circle",
+      "type": "simple-marker"
+    }
+  },
+  "title": "LOMAs",
+  "url": "https://cityofvernonia.github.io/geospatial-data/floodplain-management/lomas.geojson"
+}
