@@ -16,7 +16,7 @@ const specialFloodHazardArea = new GeoJSONLayer(
     await fetch(
       'https://cityofvernonia.github.io/geospatial-data/floodplain-management/special-flood-hazard-area.json',
       { cache: 'reload' },
-    ),
+    )
   ).json(),
 );
 
