@@ -6,9 +6,9 @@ Check out the _Survey Search_ tool in [Vernonia Map](https://map.vernonia-or.gov
 
 ![Survey Search](screenshot.jpg 'Survey Search')
 
-**GeoJSON:** [surveys.geojson](surveys.geojson) ([preview](../preview.html?geojson=https%3A%2F%2Fcityofvernonia.github.io%2Fgeospatial-data%2Frecord-surveys%2Fsurveys.json))
+**GeoJSON:** [surveys.geojson](surveys.geojson)
 
-**GeoJSONLayer JSON:** [surveys.json](surveys.json)
+**GeoJSONLayer JSON:** [surveys.json](surveys.json) ([preview](../preview.html?geojson=https%3A%2F%2Fcityofvernonia.github.io%2Fgeospatial-data%2Frecord-surveys%2Fsurveys.json))
 
 **Updated:** 2023.09.29
 

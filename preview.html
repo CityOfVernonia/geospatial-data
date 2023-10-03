@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -23,7 +23,7 @@
       import MapView from 'https://js.arcgis.com/4.27/@arcgis/core/views/MapView.js';
       import Map from 'https://js.arcgis.com/4.27/@arcgis/core/Map.js';
       import GeoJSONLayer from 'https://js.arcgis.com/4.27/@arcgis/core/layers/GeoJSONLayer.js';
-      
+
       const map = new Map({
         basemap: 'gray-vector',
       });
@@ -44,9 +44,7 @@
       });
 
       const addGeoJSONLayer = async (url) => {
-        const request = await fetch(url, { cache: 'reload' });
-        const json = await request.json();
-        const geoJSONLayer = new GeoJSONLayer(json);
+        const geoJSONLayer = new GeoJSONLayer(await (await fetch(url, { cache: 'reload' })).json());
         map.add(geoJSONLayer);
       };
 

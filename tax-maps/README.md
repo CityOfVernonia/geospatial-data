@@ -8,9 +8,9 @@ Georeferenced tax maps can be viewed overlaid with imagery and and other layers 
 
 ![Tax Maps](screenshot.jpg 'Tax Maps')
 
-**GeoJSON:** [tax-map-boundaries.geojson](tax-map-boundaries.geojson) ([preview](../preview.html?geojson=https%3A%2F%2Fcityofvernonia.github.io%2Fgeospatial-data%2Ftax-maps%2Ftax-map-boundaries.json))
+**GeoJSON:** [tax-map-boundaries.geojson](tax-map-boundaries.geojson)
 
-**GeoJSONLayer JSON:** [tax-map-boundaries.json](tax-map-boundaries.json)
+**GeoJSONLayer JSON:** [tax-map-boundaries.json](tax-map-boundaries.json) ([preview](../preview.html?geojson=https%3A%2F%2Fcityofvernonia.github.io%2Fgeospatial-data%2Ftax-maps%2Ftax-map-boundaries.json))
 
 **Updated:** 2023.10.02
 
