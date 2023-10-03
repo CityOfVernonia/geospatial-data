@@ -68,6 +68,38 @@ FIRM cross sections within Vernonia's special flood hazard area.
 }
 ```
 
+## Letter of Map Amendments (LOMA)
+
+LOMAs within Vernonia City Limits.
+
+**GeoJSON:** [lomas.geojson](lomas.geojson)
+
+**GeoJSONLayer JSON:** [lomas.json](lomas.json) ([preview](../preview.html?geojson=https%3A%2F%2Fcityofvernonia.github.io%2Fgeospatial-data%2Ffloodplain-management%2Flomas.json))
+
+**Updated:** 2023.10.03
+
+**Copyright:** FEMA and City of Vernonia, Oregon
+
+**Properties/Attributes:**
+
+```json
+{
+  "type": "Feature",
+  "geometry": {},
+  "properties": {
+    "case_number": "15-10-1489A",
+    "name": "1921 Mist Drive",
+    "date": "9/11/2015",
+    "type": "DetermLetter",
+    "status": "Completed",
+    "outcome": "Structure removed-Property partially inundated",
+    "community": "410041 - VERNONIA, CITY OF",
+    "file_id": "15-10-1489A-410041",
+    "url": "https://map1.msc.fema.gov/data/41/L/15-10-1489A-410041.pdf"
+  }
+}
+```
+
 ## FIRM Panels
 
 City of Vernonia (410041) community FIRM panels.
