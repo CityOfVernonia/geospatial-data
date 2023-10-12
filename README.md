@@ -25,6 +25,22 @@ It's just that easy.
 
 Datasets to support floodplain management.
 
+[Base Flood Elevations](floodplain-management/#base-flood-elevations)
+
+[Cross Sections](floodplain-management/#cross-sections)
+
+[Letter of Map Amendments (LOMA)](floodplain-management/#letter-of-map-amendments-loma)
+
+[FIRM Panels](floodplain-management/#firm-panels)
+
+[Flood Zones](floodplain-management/#flood-zones)
+
+[Residential Floodplain Structures](floodplain-management/#residential-floodplain-structures)
+
+[Special Flood Hazard Area](floodplain-management/#special-flood-hazard-area)
+
+[Stream Profiles](floodplain-management/#stream-profiles)
+
 ### [Record Surveys](record-surveys)
 
 Columbia County record surveys within the Vernonia spatial extent.

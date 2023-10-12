@@ -1,0 +1,55 @@
+{
+  "copyright": "City of Vernonia, Oregon",
+  "outFields": ["*"],
+  "popupEnabled": false,
+  "renderer": {
+    "field": "t9_5_compliance",
+    "legendOptions": {
+      "title": "Title 9-05 Compliance"
+    },
+    "type": "unique-value",
+    "uniqueValueInfos": [
+      {
+        "value": "Yes",
+        "symbol": {
+          "color": [0, 255, 0],
+          "size": 8,
+          "style": "circle",
+          "outline": {
+            "color": [255, 255, 255],
+            "width": 1
+          },
+          "type": "simple-marker"
+        }
+      },
+      {
+        "value": "No",
+        "symbol": {
+          "color": [255, 0, 0],
+          "size": 8,
+          "style": "circle",
+          "outline": {
+            "color": [255, 255, 255],
+            "width": 1
+          },
+          "type": "simple-marker"
+        }
+      },
+      {
+        "value": "Unknown",
+        "symbol": {
+          "color": [255, 165, 0],
+          "size": 8,
+          "style": "circle",
+          "outline": {
+            "color": [255, 255, 255],
+            "width": 1
+          },
+          "type": "simple-marker"
+        }
+      }
+    ]
+  },
+  "title": "Residential Floodplain Structures",
+  "url": "https://cityofvernonia.github.io/geospatial-data/floodplain-management/residential-floodplain-structures.geojson"
+}
