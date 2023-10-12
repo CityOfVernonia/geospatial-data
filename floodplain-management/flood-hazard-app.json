@@ -61,9 +61,9 @@
       },
       "renderer": {
         "symbol": {
-          "color": [255, 165, 0, 0.125],
+          "color": [0, 0, 0, 0],
           "outline": {
-            "color": [255, 165, 0],
+            "color": [255, 0, 0, 0.5],
             "width": 1.5
           },
           "type": "simple-fill"
