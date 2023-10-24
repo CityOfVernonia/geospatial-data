@@ -2,7 +2,7 @@
 
 Datasets to support floodplain management.
 
-Use [flood-hazard.json](flood-hazard.json) to initialize Flood Hazard group layer, including flood zones, stream profiles, cross sections, base flood elevations and FIRM panels, suitable non-floodplain apps with layer control .
+Use [flood-hazard.json](flood-hazard.json) to initialize Flood Hazard group layer, including flood zones, stream profiles, cross sections, base flood elevations and FIRM panels, suitable non-floodplain apps with layer control.
 
 Use [flood-hazard-app.json](flood-hazard-app.json) to initialize Flood Hazard group layer, including all floodplain management layers, for use in flood hazard apps.
 
