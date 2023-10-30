@@ -1,5 +1,23 @@
 {
   "copyright": "Columbia County, Oregon and City of Vernonia, Oregon",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "taxmap",
+      "type": "string"
+    },
+    {
+      "name": "county_url",
+      "type": "string"
+    },
+    {
+      "name": "city_url",
+      "type": "string"
+    }
+  ],
   "labelingInfo": [
     {
       "labelExpressionInfo": { "expression": "$feature.name" },
@@ -14,6 +32,7 @@
       }
     }
   ],
+  "outFields": ["*"],
   "popupEnabled": false,
   "renderer": {
     "symbol": {
