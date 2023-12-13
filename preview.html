@@ -23,6 +23,7 @@
       import MapView from 'https://js.arcgis.com/4.28/@arcgis/core/views/MapView.js';
       import Map from 'https://js.arcgis.com/4.28/@arcgis/core/Map.js';
       import GeoJSONLayer from 'https://js.arcgis.com/4.28/@arcgis/core/layers/GeoJSONLayer.js';
+      import CSVLayer from 'https://js.arcgis.com/4.28/@arcgis/core/layers/CSVLayer.js';
 
       const map = new Map({
         basemap: 'gray-vector',
@@ -48,10 +49,19 @@
         map.add(geoJSONLayer);
       };
 
+      const addCSVLayer = async (url) => {
+        const csvLayer = new CSVLayer(await (await fetch(url, { cache: 'reload' })).json());
+        map.add(csvLayer);
+      };
+
       const searchParams = new URLSearchParams(location.search);
 
       if (searchParams.has('geojson')) {
         addGeoJSONLayer(decodeURIComponent(searchParams.get('geojson')));
+      }
+
+      if (searchParams.has('csv')) {
+        addCSVLayer(decodeURIComponent(searchParams.get('csv')));
       }
     </script>
   </body>

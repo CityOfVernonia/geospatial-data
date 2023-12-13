@@ -70,6 +70,25 @@ FIRM cross sections within Vernonia's special flood hazard area.
 }
 ```
 
+## Floodplain Development Permits
+
+Floodplain Development Permits within Vernonia City Limits.
+
+**CSV:** [floodplain-development-permits.csv](floodplain-development-permits.csv)
+
+**CSVLayer JSON:** [floodplain-development-permits.json](floodplain-development-permits.json) ([preview](../preview.html?csv=https%3A%2F%2Fcityofvernonia.github.io%2Fgeospatial-data%2Ffloodplain-management%2Ffloodplain-development-permits.json))
+
+**Fields:**
+
+* Permit - Floodplain Development Permit number
+* Date - Date submitted
+* TaxLotId - Tax lot identification number
+* Address - Address (if applicable) without city, state, or zip code
+* Notes - Short description of permit type, e.g., new dwelling, etc.
+* Status - “Active” or “Closed” – Status of the permit
+* Latitude
+* Longitude
+
 ## Letter of Map Amendments (LOMA)
 
 LOMAs within Vernonia City Limits.
