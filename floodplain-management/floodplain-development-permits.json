@@ -1,5 +1,105 @@
 {
+  "copyright": "City of Vernonia, Oregon",
+  "displayField": "Permit",
+  "fields": [
+    {
+      "name": "Permit",
+      "type": "string"
+    },
+    {
+      "name": "Date",
+      "type": "string"
+    },
+    {
+      "alias": "Tax lot id",
+      "name": "TaxLotId",
+      "type": "string"
+    },
+    {
+      "name": "Address",
+      "type": "string"
+    },
+    {
+      "name": "Notes",
+      "type": "string"
+    },
+    {
+      "name": "Status",
+      "type": "string"
+    },
+    {
+      "name": "Latitude",
+      "type": "double"
+    },
+    {
+      "name": "Longitude",
+      "type": "double"
+    }
+  ],
   "latitudeField": "Latitude",
   "longitudeField": "Longitude",
+  "labelingInfo": [
+    {
+      "labelExpressionInfo": {
+        "expression": "$feature.Permit"
+      },
+      "minScale": 3000,
+      "repeatLabel": false,
+      "symbol": {
+        "color": "navy",
+        "font": {
+          "size": 8
+        },
+        "haloColor": "white",
+        "haloSize": 1,
+        "type": "text"
+      }
+    }
+  ],
+  "popupTemplate": {
+    "content": [
+      {
+        "fieldInfos": [
+          {
+            "fieldName": "Permit",
+            "label": "Permit No."
+          },
+          {
+            "fieldName": "Date"
+          },
+          {
+            "fieldName": "TaxLotId",
+            "label": "Tax lot"
+          },
+          {
+            "fieldName": "Address"
+          },
+          {
+            "fieldName": "Notes"
+          },
+          {
+            "fieldName": "Status"
+          }
+        ],
+        "type": "fields"
+      }
+    ],
+    "title": "Floodplain Development Permit"
+  },
+  "outFields": ["*"],
+  "renderer": {
+    "symbol": {
+      "color": "navy",
+      "outline": {
+        "color": "white",
+        "width": 1.5
+      },
+      "size": 10,
+      "style": "circle",
+      "type": "simple-marker"
+    },
+    "type": "simple"
+  },
+  "title": "Floodplain Development Permits",
   "url": "https://cityofvernonia.github.io/geospatial-data/floodplain-management/floodplain-development-permits.csv"
 }
