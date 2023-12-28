@@ -2,6 +2,12 @@
 
 All updates to data will be documented in this file.
 
+## 2023.12.28
+
+Update tax maps.
+
+Update record surveys.
+
 ## 2023.10.12
 
 Add _Residential Floodplain Structures_ dataset, and data processing.
