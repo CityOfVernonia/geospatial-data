@@ -1,4 +1,5 @@
 {
+  "copyright": "FEMA and City of Vernonia, Oregon",
   "labelingInfo": [
     {
       "labelExpressionInfo": { "expression": "$feature.name" },
@@ -27,5 +28,5 @@
     "type": "simple"
   },
   "title": "Stream Profiles",
-  "url": "https://cityofvernonia.github.io/geospatial-data/floodplain-management/stream-profiles.geojson"
+  "url": "https://cityofvernonia.github.io/geospatial-data/flood-hazard/stream-profiles.geojson"
 }

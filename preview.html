@@ -45,12 +45,20 @@
       });
 
       const addGeoJSONLayer = async (url) => {
-        const geoJSONLayer = new GeoJSONLayer(await (await fetch(url, { cache: 'reload' })).json());
+        const properties = await (await fetch(url, { cache: 'reload' })).json();
+        properties.customParameters = {
+          d: new Date().getTime(),
+        };
+        const geoJSONLayer = new GeoJSONLayer(properties);
         map.add(geoJSONLayer);
       };
 
       const addCSVLayer = async (url) => {
-        const csvLayer = new CSVLayer(await (await fetch(url, { cache: 'reload' })).json());
+        const properties = await (await fetch(url, { cache: 'reload' })).json();
+        properties.customParameters = {
+          d: new Date().getTime(),
+        };
+        const csvLayer = new CSVLayer(properties);
         map.add(csvLayer);
       };
 

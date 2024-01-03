@@ -3,7 +3,7 @@ import { queryFeatures } from '@esri/arcgis-rest-feature-service';
 import { DateTime } from 'luxon';
 import { cityExtent } from './_geometries.js';
 
-const file = 'floodplain-management/lomas.geojson';
+const file = 'flood-hazard/lomas.geojson';
 
 const downloadLOMAs = async () => {
   try {

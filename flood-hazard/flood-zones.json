@@ -6,7 +6,7 @@
     "type": "unique-value",
     "uniqueValueInfos": [
       {
-        "value": "Zone X - 0.2% annual inundation",
+        "value": "Zone X (Shaded) - 0.2% annual inundation",
         "symbol": {
           "color": [230, 152, 0, 0.2],
           "outline": {
@@ -48,5 +48,5 @@
     ]
   },
   "title": "Flood Zones",
-  "url": "https://cityofvernonia.github.io/geospatial-data/floodplain-management/flood-zones.geojson"
+  "url": "https://cityofvernonia.github.io/geospatial-data/flood-hazard/flood-zones.geojson"
 }

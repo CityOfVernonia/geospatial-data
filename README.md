@@ -21,25 +21,13 @@ It's just that easy.
 
 ## Data Categories
 
+### [Flood Hazard](flood-hazard)
+
+FEMA flood layers, i.e., flood zones, base flood elevations, etc.
+
 ### [Floodplain Management](floodplain-management)
 
 Datasets to support floodplain management.
-
-[Base Flood Elevations](floodplain-management/#base-flood-elevations)
-
-[Cross Sections](floodplain-management/#cross-sections)
-
-[Letter of Map Amendments (LOMA)](floodplain-management/#letter-of-map-amendments-loma)
-
-[FIRM Panels](floodplain-management/#firm-panels)
-
-[Flood Zones](floodplain-management/#flood-zones)
-
-[Residential Floodplain Structures](floodplain-management/#residential-floodplain-structures)
-
-[Special Flood Hazard Area](floodplain-management/#special-flood-hazard-area)
-
-[Stream Profiles](floodplain-management/#stream-profiles)
 
 ### [Record Surveys](record-surveys)
 

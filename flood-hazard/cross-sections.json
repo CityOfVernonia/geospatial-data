@@ -1,7 +1,8 @@
 {
+  "copyright": "FEMA and City of Vernonia, Oregon",
   "labelingInfo": [
     {
-      "labelExpressionInfo": { "expression": "$feature.bfe + \"'\"" },
+      "labelExpressionInfo": { "expression": "$feature.section_id + \" (\" +$feature.bfe + \"')\"" },
       "repeatLabel": false,
       "symbol": {
         "color": [255, 255, 255],
@@ -9,7 +10,7 @@
           "size": 8,
           "weight": "bold"
         },
-        "haloColor": [0, 0, 255],
+        "haloColor": [0, 0, 0],
         "haloSize": 1,
         "type": "text"
       }
@@ -19,12 +20,12 @@
   "popupEnabled": false,
   "renderer": {
     "symbol": {
-      "color": [0, 0, 255],
+      "color": [0, 0, 0],
       "type": "simple-line",
       "width": 1
     },
     "type": "simple"
   },
-  "title": "Base Flood Elevations",
-  "url": "https://cityofvernonia.github.io/geospatial-data/floodplain-management/base-flood-elevations.geojson"
+  "title": "Cross Sections",
+  "url": "https://cityofvernonia.github.io/geospatial-data/flood-hazard/cross-sections.geojson"
 }

@@ -1,4 +1,5 @@
 {
+  "copyright": "FEMA and City of Vernonia, Oregon",
   "labelingInfo": [
     {
       "labelExpressionInfo": {
@@ -29,5 +30,5 @@
     "type": "simple"
   },
   "title": "Firm Panels",
-  "url": "https://cityofvernonia.github.io/geospatial-data/floodplain-management/firm-panels.geojson"
+  "url": "https://cityofvernonia.github.io/geospatial-data/flood-hazard/firm-panels.geojson"
 }

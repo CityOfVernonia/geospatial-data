@@ -13,11 +13,11 @@
         "value": "Yes",
         "symbol": {
           "color": [0, 255, 0],
-          "size": 8,
+          "size": 10,
           "style": "circle",
           "outline": {
             "color": [255, 255, 255],
-            "width": 1
+            "width": 2
           },
           "type": "simple-marker"
         }
@@ -26,11 +26,11 @@
         "value": "No",
         "symbol": {
           "color": [255, 0, 0],
-          "size": 8,
+          "size": 10,
           "style": "circle",
           "outline": {
             "color": [255, 255, 255],
-            "width": 1
+            "width": 2
           },
           "type": "simple-marker"
         }
@@ -39,17 +39,17 @@
         "value": "Unknown",
         "symbol": {
           "color": [255, 165, 0],
-          "size": 8,
+          "size": 10,
           "style": "circle",
           "outline": {
             "color": [255, 255, 255],
-            "width": 1
+            "width": 2
           },
           "type": "simple-marker"
         }
       }
     ]
   },
-  "title": "Residential Floodplain Structures",
-  "url": "https://cityofvernonia.github.io/geospatial-data/floodplain-management/residential-floodplain-structures.geojson"
+  "title": "Floodplain Structures",
+  "url": "https://cityofvernonia.github.io/geospatial-data/floodplain-management/floodplain-structures.geojson"
 }
