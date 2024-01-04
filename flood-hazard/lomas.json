@@ -1,22 +1,72 @@
 {
   "copyright": "FEMA and City of Vernonia, Oregon",
+  "fields": [
+    {
+      "alias": "Case number",
+      "name": "case_number",
+      "type": "string"
+    },
+    {
+      "alias": "Name",
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "alias": "Date",
+      "name": "date",
+      "type": "string"
+    },
+    {
+      "alias": "Type",
+      "name": "type",
+      "type": "string"
+    },
+    {
+      "alias": "Status",
+      "name": "status",
+      "type": "string"
+    },
+    {
+      "alias": "Outcome",
+      "name": "outcome",
+      "type": "string"
+    },
+    {
+      "alias": "Community",
+      "name": "community",
+      "type": "string"
+    },
+    {
+      "alias": "Case no.",
+      "name": "file_id",
+      "type": "string"
+    },
+    {
+      "alias": "Determination letter url",
+      "name": "url",
+      "type": "string"
+    }
+  ],
   "labelingInfo": [
     {
       "labelExpressionInfo": {
         "expression": "$feature.case_number + TextFormatting.NewLine + $feature.date"
       },
-      "minScale": 24000,
+      "minScale": 1500,
       "symbol": {
-        "color": [158, 85, 156],
+        "color": "darkviolet",
         "font": {
-          "size": 8
+          "family": "Roboto",
+          "size": 8,
+          "weight": "bolder"
         },
-        "haloColor": [255, 255, 255],
+        "haloColor": "white",
         "haloSize": 1,
         "type": "text"
       }
     }
   ],
+  "outFields": ["*"],
   "popupEnabled": true,
   "popupTemplate": {
     "title": "{case_number}",
@@ -55,16 +105,16 @@
   "renderer": {
     "type": "simple",
     "symbol": {
-      "color": [158, 85, 156],
+      "color": "darkviolet",
       "outline": {
-        "color": [255, 255, 255],
+        "color": "white",
         "width": 1.5
       },
       "size": 8,
-      "style": "circle",
+      "style": "square",
       "type": "simple-marker"
     }
   },
-  "title": "LOMAs",
+  "title": "Letter of Map Amendments (LOMAs)",
   "url": "https://cityofvernonia.github.io/geospatial-data/flood-hazard/lomas.geojson"
 }
