@@ -45,7 +45,7 @@ Georeferenced tax maps can be viewed overlaid with imagery and and other layers 
 | 4404AB  | [4404AB.pdf](files/pdf/4404AB.pdf) | [4404AB.jpg](files/jpg/4404AB.jpg) | [4404AB.jpg.aux.xml](files/jpg/4404AB.jpg.aux.xml) |     n/a      |
 | 4404AC  | [4404AC.pdf](files/pdf/4404AC.pdf) | [4404AC.jpg](files/jpg/4404AC.jpg) | [4404AC.jpg.aux.xml](files/jpg/4404AC.jpg.aux.xml) |     n/a      |
 | 4404AD  | [4404AD.pdf](files/pdf/4404AD.pdf) | [4404AD.jpg](files/jpg/4404AD.jpg) | [4404AD.jpg.aux.xml](files/jpg/4404AD.jpg.aux.xml) |     n/a      |
-| 4404BA  | [4404BA.pdf](files/pdf/4404BA.pdf) | [4404BA.jpg](files/jpg/4404BA.jpg) | [4404BA.jpg.aux.xml](files/jpg/4404BA.jpg.aux.xml) |     n/a      |
+| 4404BA  | [4404BA.pdf](files/pdf/4404BA.pdf) | [4404BA.jpg](files/jpg/4404BA.jpg) | [4404BA.jpg.aux.xml](files/jpg/4404BA.jpg.aux.xml) |  2024.02.06  |
 | 4404BB  | [4404BB.pdf](files/pdf/4404BB.pdf) | [4404BB.jpg](files/jpg/4404BB.jpg) | [4404BB.jpg.aux.xml](files/jpg/4404BB.jpg.aux.xml) |  2023.12.28  |
 | 4404BC  | [4404BC.pdf](files/pdf/4404BC.pdf) | [4404BC.jpg](files/jpg/4404BC.jpg) | [4404BC.jpg.aux.xml](files/jpg/4404BC.jpg.aux.xml) |     n/a      |
 | 4404BD  | [4404BD.pdf](files/pdf/4404BD.pdf) | [4404BD.jpg](files/jpg/4404BD.jpg) | [4404BD.jpg.aux.xml](files/jpg/4404BD.jpg.aux.xml) |     n/a      |
