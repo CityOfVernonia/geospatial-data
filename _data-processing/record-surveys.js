@@ -48,8 +48,8 @@ const tiff2pdf = async (file) => {
 
 /**
  * Convert jpeg to pdf.
- * @param {*} file 
- * @returns 
+ * @param {*} file
+ * @returns
  */
 const jpeg2pdf = async (file) => {
   const parts = file.split('.');
@@ -114,6 +114,10 @@ const fileCheck = (feature) => {
   const {
     attributes: { SVY_IMAGE },
   } = feature;
+
+  if (SVY_IMAGE.includes('.jpg') || SVY_IMAGE.includes('.jpeg'))
+    console.log(chalk.yellow(`${SVY_IMAGE} is a jpeg file. Validate proper PDF conversion. ${surveyUrl}${SVY_IMAGE}`));
+
   fs.exists(
     `${fileLocation}${SVY_IMAGE}`
       .replace('.tiff', '.pdf')
@@ -175,10 +179,7 @@ const createGeoJSON = async () => {
       Object.defineProperty(properties, 'SurveyId', Object.getOwnPropertyDescriptor(properties, 'SURVEYID'));
       delete properties['SURVEYID'];
       // url to PDF
-      properties.SVY_IMAGE = `${fileUrl}${properties.SVY_IMAGE.replace(
-        '.tiff',
-        '.pdf',
-      )
+      properties.SVY_IMAGE = `${fileUrl}${properties.SVY_IMAGE.replace('.tiff', '.pdf')
         .replace('.tif', '.pdf')
         .replace('.jpg', '.pdf')
         .replace('.jpeg', '.pdf')}`;
@@ -191,7 +192,7 @@ const createGeoJSON = async () => {
       if (!properties.Firm) properties.Firm = 'Unknown';
       if (!properties.SurveyType) properties.SurveyType = 'Unknown';
       if (properties.SurveyType === 'SURVEY') properties.SurveyType = 'Survey';
-      // ensure `Subdivision` is `null` if not a subdivision 
+      // ensure `Subdivision` is `null` if not a subdivision
       if (properties.SurveyType !== 'Subdivision') properties.Subdivision = null;
 
       // timestamp for sorting
