@@ -21,6 +21,10 @@ It's just that easy.
 
 ## Data Categories
 
+### [Boundaries](boundaries)
+
+Municipal boundaries and related data.
+
 ### [Flood Hazard](flood-hazard)
 
 FEMA flood layers, i.e., flood zones, base flood elevations, etc.
