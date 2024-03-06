@@ -20,6 +20,15 @@ Annexations and de-annexations to the municipal boundary of Vernonia.
 {
   "type": "Feature",
   "geometry": {},
-  "properties": {}
+  "properties": {
+    "boundary_change": "2023-01",
+    "initial_date": "5/2/2022",
+    "completed_date": "2/7/2023",
+    "dor_approved": "Yes",
+    "dor_id": "5-354-2022",
+    "dor_date": "5/19/2022",
+    "pdf_url": "https://cityofvernonia.github.io/geospatial-data/boundaries/annexation-files/2023-01.pdf",
+    "tif_url": "https://gis.columbiacountymaps.com/annex_images/2023-01.tif"
+  }
 }
 ```

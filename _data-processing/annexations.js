@@ -3,7 +3,7 @@ import { exec } from 'child_process';
 import fs from 'fs-extra';
 import download from 'download';
 import { queryFeatures } from '@esri/arcgis-rest-feature-service';
-// import { DateTime } from 'luxon';
+import { DateTime } from 'luxon';
 import { spatialExtent } from './_geometries.js';
 const _exec = util.promisify(exec);
 
@@ -29,7 +29,7 @@ const annexationFiles = (geojson) => {
   });
 };
 
-const downloadAnnexations = async () => {
+const annexations = async () => {
   try {
     const geojson = await queryFeatures({
       url: serviceUrl,
@@ -44,37 +44,30 @@ const downloadAnnexations = async () => {
 
     annexationFiles(geojson);
 
-    /**
-     * TO DO: fix up attributes/properties
-     */
-    // geojson.features.forEach(async (feature) => {
-    //   delete feature['id'];
-    //   const {
-    //     properties: {
-    //       CASENUMBER,
-    //       PROJECTNAME,
-    //       DATEENDED,
-    //       DETERMINATIONTYPE,
-    //       STATUS,
-    //       OUTCOME,
-    //       CID,
-    //       COMMUNITYNAME,
-    //       PDFHYPERLINKID,
-    //     },
-    //   } = feature;
-    //   const _properties = {
-    //     case_number: CASENUMBER,
-    //     name: PROJECTNAME,
-    //     date: DATEENDED ? DateTime.fromMillis(DATEENDED).toUTC().toLocaleString(DateTime.DATE_SHORT) : 'Unknown',
-    //     type: DETERMINATIONTYPE,
-    //     status: STATUS,
-    //     outcome: OUTCOME,
-    //     community: `${CID} - ${COMMUNITYNAME}`,
-    //     file_id: PDFHYPERLINKID,
-    //     url: `https://map1.msc.fema.gov/data/41/L/${PDFHYPERLINKID}.pdf`,
-    //   };
-    //   feature.properties = _properties;
-    // });
+    geojson.features.forEach((feature) => {
+      if (feature['id']) delete feature['id'];
+
+      const {
+        properties: { BNDY_CHG_1, InitialDat, DORApprove, DORApprova, DORAppro_1, DateComple, IMAGE },
+      } = feature;
+
+      const _properties = {
+        boundary_change: BNDY_CHG_1,
+        initial_date: InitialDat
+          ? DateTime.fromMillis(InitialDat).toUTC().toLocaleString(DateTime.DATE_SHORT)
+          : 'Unknown',
+        completed_date: DateComple
+          ? DateTime.fromMillis(DateComple).toUTC().toLocaleString(DateTime.DATE_SHORT)
+          : 'Unknown',
+        dor_approved: DORApprove === 'Y' ? 'Yes' : 'No, n/a, or unknown',
+        dor_id: DORApprova || 'Unknown',
+        dor_date: DORAppro_1 ? DateTime.fromMillis(DORAppro_1).toUTC().toLocaleString(DateTime.DATE_SHORT) : 'Unknown',
+        pdf_url: IMAGE ? `https://cityofvernonia.github.io/geospatial-data/boundaries/annexation-files/${IMAGE.replace('tif', 'pdf')}` : null,
+        tif_url: `${imageUrl}${IMAGE}`,
+      };
+
+      feature.properties = _properties;
+    });
 
     try {
       fs.writeFile(geoJsonFile, JSON.stringify(geojson));
@@ -86,4 +79,4 @@ const downloadAnnexations = async () => {
   }
 };
 
-downloadAnnexations();
+annexations();
