@@ -1,6 +1,10 @@
 # Change Log
 
-All updates to data will be documented in this file.
+Major updates, additions and structural changes to data will be documented in this file.
+
+## 2024.03.06
+
+_Annexations_ dataset and supporting files complete and ready for use.
 
 ## 2023.12.28
 
