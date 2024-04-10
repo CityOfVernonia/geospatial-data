@@ -115,9 +115,6 @@ const fileCheck = (feature) => {
     attributes: { SVY_IMAGE },
   } = feature;
 
-  if (SVY_IMAGE.includes('.jpg') || SVY_IMAGE.includes('.jpeg'))
-    console.log(chalk.yellow(`${SVY_IMAGE} is a jpeg file. Validate proper PDF conversion. ${surveyUrl}${SVY_IMAGE}`));
-
   fs.exists(
     `${fileLocation}${SVY_IMAGE}`
       .replace('.tiff', '.pdf')
@@ -127,6 +124,10 @@ const fileCheck = (feature) => {
   )
     .then((exists) => {
       if (!exists) {
+        if (SVY_IMAGE.includes('.jpg') || SVY_IMAGE.includes('.jpeg'))
+          console.log(
+            chalk.yellow(`${SVY_IMAGE} is a jpeg file. Validate proper PDF conversion. ${surveyUrl}${SVY_IMAGE}`),
+          );
         fileDownload(SVY_IMAGE);
       }
     })
