@@ -5,7 +5,6 @@
     "fema-lomas": "node _data-processing/fema-lomas.js",
     "flood-hazard": "node _data-processing/flood-hazard.js",
     "record-surveys": "node _data-processing/record-surveys.js",
-    "floodplain-structures": "node _data-processing/floodplain-structures.js",
     "tax-map-boundaries": "node _data-processing/tax-map-boundaries.js",
     "tax-maps": "node _data-processing/tax-maps.js"
   },
