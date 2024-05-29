@@ -25,6 +25,10 @@ It's just that easy.
 
 Municipal boundaries and related data.
 
+### [Elevation Certificates](elevation-certificates)
+
+FEMA Elevation Certificates of record within the Vernonia special flood hazard area (SFHA).
+
 ### [Flood Hazard](flood-hazard)
 
 FEMA flood layers, i.e., flood zones, base flood elevations, etc.

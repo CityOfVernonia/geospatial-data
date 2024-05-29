@@ -1,0 +1,144 @@
+{
+  "copyright": "City of Vernonia, Oregon",
+  "displayField": "Address",
+  "fields": [
+    {
+      "name": "Latitude",
+      "type": "double"
+    },
+    {
+      "name": "Longitude",
+      "type": "double"
+    },
+    {
+      "name": "Address",
+      "type": "string"
+    },
+    {
+      "name": "Date",
+      "type": "string"
+    },
+    {
+      "alias": "FIRM Panel",
+      "name": "FIRMPanel",
+      "type": ""
+    },
+    {
+      "alias": "Flood Zone",
+      "name": "FloodZone",
+      "type": "string"
+    },
+    {
+      "name": "Ground",
+      "type": "double"
+    },
+    {
+      "alias": "Base Flood Elevation",
+      "name": "BaseFloodElevation",
+      "type": "double"
+    },
+    {
+      "alias": "Highest Flood of Record",
+      "name": "HighestFloodOfRecord",
+      "type": "double"
+    },
+    {
+      "alias": "Lowest Horizontal",
+      "name": "LowestHorizontal",
+      "type": "double"
+    },
+    {
+      "alias": "First Floor",
+      "name": "FirstFloor",
+      "type": "double"
+    },
+    {
+      "alias": "Lowest Mechanical",
+      "name": "LowestMechanical",
+      "type": "double"
+    },
+    {
+      "alias": "Elevation Certificate",
+      "name": "ElevCertURL",
+      "type": "string"
+    }
+  ],
+  "labelingInfo": [
+    {
+      "labelExpressionInfo": {
+        "expression": "$feature.Address"
+      },
+      "minScale": 1500,
+      "repeatLabel": false,
+      "symbol": {
+        "color": "navy",
+        "font": {
+          "family": "Roboto",
+          "size": 8,
+          "weight": "bolder"
+        },
+        "haloColor": "white",
+        "haloSize": 1,
+        "type": "text"
+      }
+    }
+  ],
+  "latitudeField": "Latitude",
+  "longitudeField": "Longitude",
+  "popupTemplate": {
+    "content": [
+      {
+        "fieldInfos": [
+          {
+            "fieldName": "Date"
+          },
+          {
+            "fieldName": "FIRMPanel"
+          },
+          {
+            "fieldName": "FloodZone"
+          },
+          {
+            "fieldName": "Ground"
+          },
+          {
+            "fieldName": "BaseFloodElevation"
+          },
+          {
+            "fieldName": "HighestFloodOfRecord"
+          },
+          {
+            "fieldName": "LowestHorizontal"
+          },
+          {
+            "fieldName": "FirstFloor"
+          },
+          {
+            "fieldName": "LowestMechanical"
+          },
+          {
+            "fieldName": "ElevCertURL"
+          }
+        ],
+        "type": "fields"
+      }
+    ],
+    "title": "{Address}"
+  },
+  "outFields": ["*"],
+  "renderer": {
+    "symbol": {
+      "color": "navy",
+      "outline": {
+        "color": "white",
+        "width": 1.25
+      },
+      "size": 12,
+      "style": "square",
+      "type": "simple-marker"
+    },
+    "type": "simple"
+  },
+  "title": "Elevation Certificates",
+  "url": "https://cityofvernonia.github.io/geospatial-data/elevation-certificates/elevation-certificates.csv"
+}
