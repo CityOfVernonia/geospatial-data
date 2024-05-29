@@ -29,6 +29,6 @@ FEMA Elevation Certificates of record within the Vernonia special flood hazard a
 
 ## Elevation Certificate PDF Naming Convention
 
-**<YYYY><MM><DD>-<ADDRESS>.pdf**
+**\<YYYY\>\<MM\>\<DD\>-\<ADDRESS\>.pdf**
 
 Spaces in address replaced with underscores.
