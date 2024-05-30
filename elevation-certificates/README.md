@@ -8,27 +8,28 @@ FEMA Elevation Certificates of record within the Vernonia special flood hazard a
 
 ## Fields
 
-* Latitude
-* Longitude
-* Date - Elevation certificate date
-* FIRMPanel - FIRM panel id
-* FloodZone - Flood zone structure is located within
-* Ground - Lowest adjacent grade (LAG) elevation of the structure
-* BaseFloodElevation - Base flood elevation (BFE) at structure location
-* HighestFloodOfRecord - Highest flood of record (HFOR) elevation at structure location (December 3, 2007)
-* LowestHorizontal - Lowest horizontal member elevation of the structure (top of foundation or bottom of floor joists)
-* FirstFloor - First floor elevation of the structure
-* LowestMechanical - Lowest mechanical elevation of the structure
-* ElevCertURL - URL of the elevation certificate PDF
-
-## Records
-
-| Latitude | Longitude | Address | Date | FIRM Panel | Flood Zone | Ground | Base Flood Elevation | Highest Flood of Record | First Floor | Lowest Mechanical | PDF |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | :---: |
-45.86193 | -123.188289 | 1026 State Avenue | 5/28/2024 | 41009C0381D | Zone AE | 619.5 | 621.2 | 622.2 | 624.5 | 624.5 | [View](https://cityofvernonia.github.io/geospatial-data/elevation-certificates/20240528-1206_State_Avenue.pdf) |
+- **Latitude**
+- **Longitude**
+- **Date** - Elevation certificate date
+- **FIRMPanel** - FIRM panel id
+- **FloodZone** - Flood zone structure is located within
+- **Ground** - Lowest adjacent grade (LAG) elevation of the structure
+- **BaseFloodElevation** - Base flood elevation (BFE) at structure location
+- **HighestFloodOfRecord** - Highest flood of record (HFOR) elevation at structure location (December 3, 2007)
+- **DesignFloodElevation** - Design flood elevation (DFE) for minimum structure height and floodproofing after flood insurance rate study dated November 26, 2010 being BFE + 3' or HFOR + 1' whichever is higher
+- **LowestHorizontal** - Lowest horizontal member elevation of the structure (top of foundation or bottom of floor joists)
+- **FirstFloor** - First floor elevation of the structure
+- **LowestMechanical** - Lowest mechanical elevation of the structure
+- **ElevCertURL** - URL of the elevation certificate PDF
 
 ## Elevation Certificate PDF Naming Convention
 
 **\<YYYY\>\<MM\>\<DD\>-\<ADDRESS\>.pdf**
 
 Spaces in address replaced with underscores.
+
+## Files
+
+| Latitude | Longitude   | Address           | Date      |                  PDF                   |
+| -------- | ----------- | ----------------- | --------- | :------------------------------------: |
+| 45.86193 | -123.188289 | 1026 State Avenue | 5/28/2024 | [View](20240528-1206_State_Avenue.pdf) |

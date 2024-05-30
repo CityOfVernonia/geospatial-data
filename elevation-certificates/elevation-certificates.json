@@ -43,6 +43,11 @@
       "type": "double"
     },
     {
+      "alias": "Design Flood Elevation",
+      "name": "DesignFloodElevation",
+      "type": "double"
+    },
+    {
       "alias": "Lowest Horizontal",
       "name": "LowestHorizontal",
       "type": "double"
@@ -112,6 +117,10 @@
             "label": "Highest Flood of Record"
           },
           {
+            "fieldName": "DesignFloodElevation",
+            "label": "Design Flood Elevation"
+          },
+          {
             "fieldName": "LowestHorizontal",
             "label": "Lowest Horizontal"
           },
@@ -139,11 +148,10 @@
       "color": "navy",
       "outline": {
         "color": "white",
-        "width": 1.25
+        "width": 0.75
       },
-      "size": 16,
-      "path": "M15 3.6L11.4 0H2v16h13zM14 15H3V1h7v4h4zm0-11h-3V1h.31L14 3.69zM4 14h9V7H4zm3-1v-1h2v1zm0-2v-1h2v1zm5 2h-2v-1h2zm0-2h-2v-1h2zm0-3v1h-2V8zM9 8v1H7V8zM5 8h1v1H5zm0 2h1v1H5zm0 2h1v1H5zm4-9H4V2h5zm0 2H4V4h5z",
-      
+      "path": "M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM112 256H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16z",
+      "size": 20,
       "type": "simple-marker"
     },
     "type": "simple"
