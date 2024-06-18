@@ -24,22 +24,22 @@
         <LatestWKID>6557</LatestWKID>
       </SpatialReference>
       <SourceGCPs xsi:type="typens:ArrayOfDouble">
-        <Double>10698.003422333617</Double>
-        <Double>-1293.2790290061384</Double>
-        <Double>1507.0376579805747</Double>
-        <Double>-1318.7446042783558</Double>
-        <Double>10402.413502516416</Double>
-        <Double>-10153.260251600295</Double>
-        <Double>1295.5910810919377</Double>
-        <Double>-10047.817849110812</Double>
+        <Double>10697.470393101252</Double>
+        <Double>-1039.9291633069515</Double>
+        <Double>2116.66093042683</Double>
+        <Double>-654.5252611618489</Double>
+        <Double>10764.10099364973</Double>
+        <Double>-9912.0984331462532</Double>
+        <Double>1296.1861872629029</Double>
+        <Double>-9795.0290067195892</Double>
       </SourceGCPs>
       <TargetGCPs xsi:type="typens:ArrayOfDouble">
         <Double>627055.96492282371</Double>
         <Double>1510506.6696399662</Double>
-        <Double>625523.78047737281</Double>
-        <Double>1510501.3778471886</Double>
-        <Double>627007.48795494856</Double>
-        <Double>1509029.5640667784</Double>
+        <Double>625625.275672046</Double>
+        <Double>1510569.989259921</Double>
+        <Double>627067.46821730584</Double>
+        <Double>1509027.6627803773</Double>
         <Double>625489.11087493331</Double>
         <Double>1509046.3540178824</Double>
       </TargetGCPs>
@@ -47,9 +47,9 @@
     </GeodataXform>
   </Metadata>
   <GCPList Projection="PROJCS[&quot;NAD83(2011) / Oregon GIC Lambert (ft)&quot;,GEOGCS[&quot;NAD83(2011)&quot;,DATUM[&quot;NAD83_National_Spatial_Reference_System_2011&quot;,SPHEROID[&quot;GRS 1980&quot;,6378137,298.257222101,AUTHORITY[&quot;EPSG&quot;,&quot;7019&quot;]],AUTHORITY[&quot;EPSG&quot;,&quot;1116&quot;]],PRIMEM[&quot;Greenwich&quot;,0],UNIT[&quot;Degree&quot;,0.0174532925199433]],PROJECTION[&quot;Lambert_Conformal_Conic_2SP&quot;],PARAMETER[&quot;latitude_of_origin&quot;,41.75],PARAMETER[&quot;central_meridian&quot;,-120.5],PARAMETER[&quot;standard_parallel_1&quot;,43],PARAMETER[&quot;standard_parallel_2&quot;,45.5],PARAMETER[&quot;false_easting&quot;,1312335.95800525],PARAMETER[&quot;false_northing&quot;,0],UNIT[&quot;foot&quot;,0.3048,AUTHORITY[&quot;EPSG&quot;,&quot;9002&quot;]],AXIS[&quot;Easting&quot;,EAST],AXIS[&quot;Northing&quot;,NORTH],AUTHORITY[&quot;EPSG&quot;,&quot;6557&quot;]]" dataAxisToSRSAxisMapping="1,2">
-    <GCP Id="" Pixel="10709.5388" Line="1295.9785" X="6.270559649228E+05" Y="1.510506669640E+06" />
-    <GCP Id="" Pixel="1516.2639" Line="1320.8126" X="6.255237804774E+05" Y="1.510501377847E+06" />
-    <GCP Id="" Pixel="10413.4935" Line="10155.3193" X="6.270074879549E+05" Y="1.509029564067E+06" />
-    <GCP Id="" Pixel="1307.3361" Line="10049.9961" X="6.254891108749E+05" Y="1.509046354018E+06" />
+    <GCP Id="" Pixel="10698.0034" Line="1293.2790" X="6.270559649228E+05" Y="1.510506669640E+06" />
+    <GCP Id="" Pixel="1507.0377" Line="1318.7446" X="6.255237804774E+05" Y="1.510501377847E+06" />
+    <GCP Id="" Pixel="10402.4135" Line="10153.2603" X="6.270074879549E+05" Y="1.509029564067E+06" />
+    <GCP Id="" Pixel="1295.5911" Line="10047.8178" X="6.254891108749E+05" Y="1.509046354018E+06" />
   </GCPList>
 </PAMDataset>

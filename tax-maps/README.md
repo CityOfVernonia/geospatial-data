@@ -47,11 +47,11 @@ Georeferenced tax maps can be viewed overlaid with imagery and and other layers 
 | 4404AD  | [4404AD.pdf](files/pdf/4404AD.pdf) | [4404AD.jpg](files/jpg/4404AD.jpg) | [4404AD.jpg.aux.xml](files/jpg/4404AD.jpg.aux.xml) |  2024.05.28  |
 | 4404BA  | [4404BA.pdf](files/pdf/4404BA.pdf) | [4404BA.jpg](files/jpg/4404BA.jpg) | [4404BA.jpg.aux.xml](files/jpg/4404BA.jpg.aux.xml) |  2024.05.06  |
 | 4404BB  | [4404BB.pdf](files/pdf/4404BB.pdf) | [4404BB.jpg](files/jpg/4404BB.jpg) | [4404BB.jpg.aux.xml](files/jpg/4404BB.jpg.aux.xml) |  2023.12.28  |
-| 4404BC  | [4404BC.pdf](files/pdf/4404BC.pdf) | [4404BC.jpg](files/jpg/4404BC.jpg) | [4404BC.jpg.aux.xml](files/jpg/4404BC.jpg.aux.xml) |  2024.05.28  |
+| 4404BC  | [4404BC.pdf](files/pdf/4404BC.pdf) | [4404BC.jpg](files/jpg/4404BC.jpg) | [4404BC.jpg.aux.xml](files/jpg/4404BC.jpg.aux.xml) |  2024.06.18  |
 | 4404BD  | [4404BD.pdf](files/pdf/4404BD.pdf) | [4404BD.jpg](files/jpg/4404BD.jpg) | [4404BD.jpg.aux.xml](files/jpg/4404BD.jpg.aux.xml) |  2024.05.28  |
 | 4404CA  | [4404CA.pdf](files/pdf/4404CA.pdf) | [4404CA.jpg](files/jpg/4404CA.jpg) | [4404CA.jpg.aux.xml](files/jpg/4404CA.jpg.aux.xml) |     n/a      |
 | 4404CB  | [4404CB.pdf](files/pdf/4404CB.pdf) | [4404CB.jpg](files/jpg/4404CB.jpg) | [4404CB.jpg.aux.xml](files/jpg/4404CB.jpg.aux.xml) |     n/a      |
-| 4404DA  | [4404DA.pdf](files/pdf/4404DA.pdf) | [4404DA.jpg](files/jpg/4404DA.jpg) | [4404DA.jpg.aux.xml](files/jpg/4404DA.jpg.aux.xml) |  2023.12.28  |
+| 4404DA  | [4404DA.pdf](files/pdf/4404DA.pdf) | [4404DA.jpg](files/jpg/4404DA.jpg) | [4404DA.jpg.aux.xml](files/jpg/4404DA.jpg.aux.xml) |  2024.06.18  |
 | 4405    |   [4405.pdf](files/pdf/4405.pdf)   |   [4405.jpg](files/jpg/4405.jpg)   |   [4405.jpg.aux.xml](files/jpg/4405.jpg.aux.xml)   |     n/a      |
 | 4405AA  | [4405AA.pdf](files/pdf/4405AA.pdf) | [4405AA.jpg](files/jpg/4405AA.jpg) | [4405AA.jpg.aux.xml](files/jpg/4405AA.jpg.aux.xml) |  2024.05.06  |
 | 4405AC  | [4405AC.pdf](files/pdf/4405AC.pdf) | [4405AC.jpg](files/jpg/4405AC.jpg) | [4405AC.jpg.aux.xml](files/jpg/4405AC.jpg.aux.xml) |     n/a      |

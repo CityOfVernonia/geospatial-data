@@ -24,14 +24,14 @@
         <LatestWKID>6557</LatestWKID>
       </SpatialReference>
       <SourceGCPs xsi:type="typens:ArrayOfDouble">
-        <Double>1836.2536057340585</Double>
-        <Double>-1129.0558778252453</Double>
-        <Double>9297.3900825526507</Double>
-        <Double>-9469.5227573551238</Double>
-        <Double>10557.681714145467</Double>
-        <Double>-2308.0172121562064</Double>
-        <Double>1563.5754660905804</Double>
-        <Double>-9143.5161376688629</Double>
+        <Double>1836.0808002977656</Double>
+        <Double>-874.89028742536902</Double>
+        <Double>9298.1669763791815</Double>
+        <Double>-9215.7252363413572</Double>
+        <Double>10558.107587248511</Double>
+        <Double>-2054.4981906339526</Double>
+        <Double>1563.8407933270719</Double>
+        <Double>-8890.8397649712861</Double>
       </SourceGCPs>
       <TargetGCPs xsi:type="typens:ArrayOfDouble">
         <Double>624148.49352455465</Double>
@@ -47,9 +47,9 @@
     </GeodataXform>
   </Metadata>
   <GCPList Projection="PROJCS[&quot;NAD83(2011) / Oregon GIC Lambert (ft)&quot;,GEOGCS[&quot;NAD83(2011)&quot;,DATUM[&quot;NAD83_National_Spatial_Reference_System_2011&quot;,SPHEROID[&quot;GRS 1980&quot;,6378137,298.257222101,AUTHORITY[&quot;EPSG&quot;,&quot;7019&quot;]],AUTHORITY[&quot;EPSG&quot;,&quot;1116&quot;]],PRIMEM[&quot;Greenwich&quot;,0],UNIT[&quot;Degree&quot;,0.0174532925199433]],PROJECTION[&quot;Lambert_Conformal_Conic_2SP&quot;],PARAMETER[&quot;latitude_of_origin&quot;,41.75],PARAMETER[&quot;central_meridian&quot;,-120.5],PARAMETER[&quot;standard_parallel_1&quot;,43],PARAMETER[&quot;standard_parallel_2&quot;,45.5],PARAMETER[&quot;false_easting&quot;,1312335.95800525],PARAMETER[&quot;false_northing&quot;,0],UNIT[&quot;foot&quot;,0.3048,AUTHORITY[&quot;EPSG&quot;,&quot;9002&quot;]],AXIS[&quot;Easting&quot;,EAST],AXIS[&quot;Northing&quot;,NORTH],AUTHORITY[&quot;EPSG&quot;,&quot;6557&quot;]]" dataAxisToSRSAxisMapping="1,2">
-    <GCP Id="" Pixel="1647.0075" Line="1184.9834" X="6.241484935246E+05" Y="1.509178494468E+06" />
-    <GCP Id="" Pixel="9106.7425" Line="9525.4083" X="6.253929669058E+05" Y="1.507788799196E+06" />
-    <GCP Id="" Pixel="10366.9451" Line="2365.7088" X="6.256024044918E+05" Y="1.508982622597E+06" />
-    <GCP Id="" Pixel="1373.5376" Line="9200.8648" X="6.241037230011E+05" Y="1.507842222078E+06" />
+    <GCP Id="" Pixel="1836.2536" Line="1129.0559" X="6.241484935246E+05" Y="1.509178494468E+06" />
+    <GCP Id="" Pixel="9297.3901" Line="9469.5228" X="6.253929669058E+05" Y="1.507788799196E+06" />
+    <GCP Id="" Pixel="10557.6817" Line="2308.0172" X="6.256024044918E+05" Y="1.508982622597E+06" />
+    <GCP Id="" Pixel="1563.5755" Line="9143.5161" X="6.241037230011E+05" Y="1.507842222078E+06" />
   </GCPList>
 </PAMDataset>

@@ -39,7 +39,7 @@ const vernoniaSpatialExtent = {
  */
 const tiff2pdf = async (file) => {
   const parts = file.split('.');
-  if (parts[1] !== 'tif' && parts[1] !== 'tiff') {
+  if (parts[1] !== 'tif' && parts[1] !== 'tiff' && parts[1] !== 'TIF' && parts[1] !== 'TIFF') {
     console.log(chalk.red(`${file} is not a tiff file.`));
     return;
   }
@@ -53,7 +53,7 @@ const tiff2pdf = async (file) => {
  */
 const jpeg2pdf = async (file) => {
   const parts = file.split('.');
-  if (parts[1] !== 'jpg' && parts[1] !== 'jpeg') {
+  if (parts[1] !== 'jpg' && parts[1] !== 'jpeg' && parts[1] !== 'JPG' && parts[1] !== 'JPEG') {
     console.log(chalk.red(`${file} is not a jpeg file.`));
     return;
   }
@@ -75,7 +75,7 @@ const fileWrite = async (SVY_IMAGE, data) => {
   fs.writeFile(file, data)
     .then(async () => {
       const type = file.split('.')[1];
-      if (type === 'tif' || type === 'tiff') {
+      if (type === 'tif' || type === 'tiff' || type === 'TIF' || type === 'TIFF') {
         try {
           await tiff2pdf(file);
           fs.remove(file);
@@ -83,7 +83,7 @@ const fileWrite = async (SVY_IMAGE, data) => {
           console.log(chalk.red(`tiff2pdf ${SVY_IMAGE} write failed.`, error));
         }
       }
-      if (type === 'jpg' || type === 'jpeg') {
+      if (type === 'jpg' || type === 'jpeg' || type === 'JPG' || type === 'JPEG') {
         jpeg2pdf(file);
       }
     })
@@ -118,13 +118,17 @@ const fileCheck = (feature) => {
   fs.exists(
     `${fileLocation}${SVY_IMAGE}`
       .replace('.tiff', '.pdf')
+      .replace('.TIFF', '.pdf')
       .replace('.tif', '.pdf')
+      .replace('.TIF', '.pdf')
       .replace('.jpg', '.pdf')
-      .replace('.jpeg', '.pdf'),
+      .replace('.JPG', '.pdf')
+      .replace('.jpeg', '.pdf')
+      .replace('.JPEG', '.pdf'),
   )
     .then((exists) => {
       if (!exists) {
-        if (SVY_IMAGE.includes('.jpg') || SVY_IMAGE.includes('.jpeg'))
+        if (SVY_IMAGE.includes('.jpg') || SVY_IMAGE.includes('.jpeg') || SVY_IMAGE.includes('.JPG') || SVY_IMAGE.includes('.JPEG'))
           console.log(
             chalk.yellow(`${SVY_IMAGE} is a jpeg file. Validate proper PDF conversion. ${surveyUrl}${SVY_IMAGE}`),
           );
