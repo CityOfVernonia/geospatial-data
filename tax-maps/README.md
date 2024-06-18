@@ -37,7 +37,7 @@ Georeferenced tax maps can be viewed overlaid with imagery and and other layers 
 | ------- | :--------------------------------: | :--------------------------------: | :------------------------------------------------: | :----------: |
 | 4403    |   [4403.pdf](files/pdf/4403.pdf)   |   [4403.jpg](files/jpg/4403.jpg)   |   [4403.jpg.aux.xml](files/jpg/4403.jpg.aux.xml)   |  2023.06.05  |
 | 4403BA  | [4403BA.pdf](files/pdf/4403BA.pdf) | [4403BA.jpg](files/jpg/4403BA.jpg) | [4403BA.jpg.aux.xml](files/jpg/4403BA.jpg.aux.xml) |  2023.05.03  |
-| 4403BB  | [4403BB.pdf](files/pdf/4403BB.pdf) | [4403BB.jpg](files/jpg/4403BB.jpg) | [4403BB.jpg.aux.xml](files/jpg/4403BB.jpg.aux.xml) |  2023.09.08  |
+| 4403BB  | [4403BB.pdf](files/pdf/4403BB.pdf) | [4403BB.jpg](files/jpg/4403BB.jpg) | [4403BB.jpg.aux.xml](files/jpg/4403BB.jpg.aux.xml) |  2024.06.18  |
 | 4403BC  | [4403BC.pdf](files/pdf/4403BC.pdf) | [4403BC.jpg](files/jpg/4403BC.jpg) | [4403BC.jpg.aux.xml](files/jpg/4403BC.jpg.aux.xml) |  2023.09.08  |
 | 4403BD  | [4403BD.pdf](files/pdf/4403BD.pdf) | [4403BD.jpg](files/jpg/4403BD.jpg) | [4403BD.jpg.aux.xml](files/jpg/4403BD.jpg.aux.xml) |     n/a      |
 | 4403CA  | [4403CA.pdf](files/pdf/4403CA.pdf) | [4403CA.jpg](files/jpg/4403CA.jpg) | [4403CA.jpg.aux.xml](files/jpg/4403CA.jpg.aux.xml) |     n/a      |
@@ -46,7 +46,7 @@ Georeferenced tax maps can be viewed overlaid with imagery and and other layers 
 | 4404AC  | [4404AC.pdf](files/pdf/4404AC.pdf) | [4404AC.jpg](files/jpg/4404AC.jpg) | [4404AC.jpg.aux.xml](files/jpg/4404AC.jpg.aux.xml) |     n/a      |
 | 4404AD  | [4404AD.pdf](files/pdf/4404AD.pdf) | [4404AD.jpg](files/jpg/4404AD.jpg) | [4404AD.jpg.aux.xml](files/jpg/4404AD.jpg.aux.xml) |  2024.05.28  |
 | 4404BA  | [4404BA.pdf](files/pdf/4404BA.pdf) | [4404BA.jpg](files/jpg/4404BA.jpg) | [4404BA.jpg.aux.xml](files/jpg/4404BA.jpg.aux.xml) |  2024.05.06  |
-| 4404BB  | [4404BB.pdf](files/pdf/4404BB.pdf) | [4404BB.jpg](files/jpg/4404BB.jpg) | [4404BB.jpg.aux.xml](files/jpg/4404BB.jpg.aux.xml) |  2023.12.28  |
+| 4404BB  | [4404BB.pdf](files/pdf/4404BB.pdf) | [4404BB.jpg](files/jpg/4404BB.jpg) | [4404BB.jpg.aux.xml](files/jpg/4404BB.jpg.aux.xml) |  2024.06.18  |
 | 4404BC  | [4404BC.pdf](files/pdf/4404BC.pdf) | [4404BC.jpg](files/jpg/4404BC.jpg) | [4404BC.jpg.aux.xml](files/jpg/4404BC.jpg.aux.xml) |  2024.06.18  |
 | 4404BD  | [4404BD.pdf](files/pdf/4404BD.pdf) | [4404BD.jpg](files/jpg/4404BD.jpg) | [4404BD.jpg.aux.xml](files/jpg/4404BD.jpg.aux.xml) |  2024.05.28  |
 | 4404CA  | [4404CA.pdf](files/pdf/4404CA.pdf) | [4404CA.jpg](files/jpg/4404CA.jpg) | [4404CA.jpg.aux.xml](files/jpg/4404CA.jpg.aux.xml) |     n/a      |
