@@ -36,7 +36,7 @@ Georeferenced tax maps can be viewed overlaid with imagery and and other layers 
 | Tax Map |                PDF                 |                JPEG                |                    Georeference                    | Last Updated |
 | ------- | :--------------------------------: | :--------------------------------: | :------------------------------------------------: | :----------: |
 | 4403    |   [4403.pdf](files/pdf/4403.pdf)   |   [4403.jpg](files/jpg/4403.jpg)   |   [4403.jpg.aux.xml](files/jpg/4403.jpg.aux.xml)   |  2023.06.05  |
-| 4403BA  | [4403BA.pdf](files/pdf/4403BA.pdf) | [4403BA.jpg](files/jpg/4403BA.jpg) | [4403BA.jpg.aux.xml](files/jpg/4403BA.jpg.aux.xml) |  2023.05.03  |
+| 4403BA  | [4403BA.pdf](files/pdf/4403BA.pdf) | [4403BA.jpg](files/jpg/4403BA.jpg) | [4403BA.jpg.aux.xml](files/jpg/4403BA.jpg.aux.xml) |  2024.06.28  |
 | 4403BB  | [4403BB.pdf](files/pdf/4403BB.pdf) | [4403BB.jpg](files/jpg/4403BB.jpg) | [4403BB.jpg.aux.xml](files/jpg/4403BB.jpg.aux.xml) |  2024.06.18  |
 | 4403BC  | [4403BC.pdf](files/pdf/4403BC.pdf) | [4403BC.jpg](files/jpg/4403BC.jpg) | [4403BC.jpg.aux.xml](files/jpg/4403BC.jpg.aux.xml) |  2023.09.08  |
 | 4403BD  | [4403BD.pdf](files/pdf/4403BD.pdf) | [4403BD.jpg](files/jpg/4403BD.jpg) | [4403BD.jpg.aux.xml](files/jpg/4403BD.jpg.aux.xml) |     n/a      |
@@ -57,7 +57,7 @@ Georeferenced tax maps can be viewed overlaid with imagery and and other layers 
 | 4405AC  | [4405AC.pdf](files/pdf/4405AC.pdf) | [4405AC.jpg](files/jpg/4405AC.jpg) | [4405AC.jpg.aux.xml](files/jpg/4405AC.jpg.aux.xml) |     n/a      |
 | 4405AD  | [4405AD.pdf](files/pdf/4405AD.pdf) | [4405AD.jpg](files/jpg/4405AD.jpg) | [4405AD.jpg.aux.xml](files/jpg/4405AD.jpg.aux.xml) |  2024.05.28  |
 | 4405DA  | [4405DA.pdf](files/pdf/4405DA.pdf) | [4405DA.jpg](files/jpg/4405DA.jpg) | [4405DA.jpg.aux.xml](files/jpg/4405DA.jpg.aux.xml) |  2024.05.28  |
-| 4405DD  | [4405DD.pdf](files/pdf/4405DD.pdf) | [4405DD.jpg](files/jpg/4405DD.jpg) | [4405DD.jpg.aux.xml](files/jpg/4405DD.jpg.aux.xml) |     n/a      |
+| 4405DD  | [4405DD.pdf](files/pdf/4405DD.pdf) | [4405DD.jpg](files/jpg/4405DD.jpg) | [4405DD.jpg.aux.xml](files/jpg/4405DD.jpg.aux.xml) |  2024.06.28  |
 | 4406    |   [4406.pdf](files/pdf/4406.pdf)   |   [4406.jpg](files/jpg/4406.jpg)   |   [4406.jpg.aux.xml](files/jpg/4406.jpg.aux.xml)   |  2023.05.05  |
 | 4407    |   [4407.pdf](files/pdf/4407.pdf)   |   [4407.jpg](files/jpg/4407.jpg)   |   [4407.jpg.aux.xml](files/jpg/4407.jpg.aux.xml)   |  2023.05.05  |
 | 4408    |   [4408.pdf](files/pdf/4408.pdf)   |   [4408.jpg](files/jpg/4408.jpg)   |   [4408.jpg.aux.xml](files/jpg/4408.jpg.aux.xml)   |  2023.05.05  |
