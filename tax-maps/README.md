@@ -46,7 +46,7 @@ Georeferenced tax maps can be viewed overlaid with imagery and and other layers 
 | 4404AC  | [4404AC.pdf](files/pdf/4404AC.pdf) | [4404AC.jpg](files/jpg/4404AC.jpg) | [4404AC.jpg.aux.xml](files/jpg/4404AC.jpg.aux.xml) |     n/a      |
 | 4404AD  | [4404AD.pdf](files/pdf/4404AD.pdf) | [4404AD.jpg](files/jpg/4404AD.jpg) | [4404AD.jpg.aux.xml](files/jpg/4404AD.jpg.aux.xml) |  2024.05.28  |
 | 4404BA  | [4404BA.pdf](files/pdf/4404BA.pdf) | [4404BA.jpg](files/jpg/4404BA.jpg) | [4404BA.jpg.aux.xml](files/jpg/4404BA.jpg.aux.xml) |  2024.05.06  |
-| 4404BB  | [4404BB.pdf](files/pdf/4404BB.pdf) | [4404BB.jpg](files/jpg/4404BB.jpg) | [4404BB.jpg.aux.xml](files/jpg/4404BB.jpg.aux.xml) |  2024.06.18  |
+| 4404BB  | [4404BB.pdf](files/pdf/4404BB.pdf) | [4404BB.jpg](files/jpg/4404BB.jpg) | [4404BB.jpg.aux.xml](files/jpg/4404BB.jpg.aux.xml) |  2024.12.10  |
 | 4404BC  | [4404BC.pdf](files/pdf/4404BC.pdf) | [4404BC.jpg](files/jpg/4404BC.jpg) | [4404BC.jpg.aux.xml](files/jpg/4404BC.jpg.aux.xml) |  2024.06.18  |
 | 4404BD  | [4404BD.pdf](files/pdf/4404BD.pdf) | [4404BD.jpg](files/jpg/4404BD.jpg) | [4404BD.jpg.aux.xml](files/jpg/4404BD.jpg.aux.xml) |  2024.05.28  |
 | 4404CA  | [4404CA.pdf](files/pdf/4404CA.pdf) | [4404CA.jpg](files/jpg/4404CA.jpg) | [4404CA.jpg.aux.xml](files/jpg/4404CA.jpg.aux.xml) |     n/a      |
@@ -56,7 +56,7 @@ Georeferenced tax maps can be viewed overlaid with imagery and and other layers 
 | 4405AA  | [4405AA.pdf](files/pdf/4405AA.pdf) | [4405AA.jpg](files/jpg/4405AA.jpg) | [4405AA.jpg.aux.xml](files/jpg/4405AA.jpg.aux.xml) |  2024.05.06  |
 | 4405AC  | [4405AC.pdf](files/pdf/4405AC.pdf) | [4405AC.jpg](files/jpg/4405AC.jpg) | [4405AC.jpg.aux.xml](files/jpg/4405AC.jpg.aux.xml) |     n/a      |
 | 4405AD  | [4405AD.pdf](files/pdf/4405AD.pdf) | [4405AD.jpg](files/jpg/4405AD.jpg) | [4405AD.jpg.aux.xml](files/jpg/4405AD.jpg.aux.xml) |  2024.05.28  |
-| 4405DA  | [4405DA.pdf](files/pdf/4405DA.pdf) | [4405DA.jpg](files/jpg/4405DA.jpg) | [4405DA.jpg.aux.xml](files/jpg/4405DA.jpg.aux.xml) |  2024.05.28  |
+| 4405DA  | [4405DA.pdf](files/pdf/4405DA.pdf) | [4405DA.jpg](files/jpg/4405DA.jpg) | [4405DA.jpg.aux.xml](files/jpg/4405DA.jpg.aux.xml) |  2024.12.10  |
 | 4405DD  | [4405DD.pdf](files/pdf/4405DD.pdf) | [4405DD.jpg](files/jpg/4405DD.jpg) | [4405DD.jpg.aux.xml](files/jpg/4405DD.jpg.aux.xml) |  2024.06.28  |
 | 4406    |   [4406.pdf](files/pdf/4406.pdf)   |   [4406.jpg](files/jpg/4406.jpg)   |   [4406.jpg.aux.xml](files/jpg/4406.jpg.aux.xml)   |  2023.05.05  |
 | 4407    |   [4407.pdf](files/pdf/4407.pdf)   |   [4407.jpg](files/jpg/4407.jpg)   |   [4407.jpg.aux.xml](files/jpg/4407.jpg.aux.xml)   |  2023.05.05  |

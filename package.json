@@ -14,8 +14,8 @@
     "download": "^8.0.0",
     "fs-extra": "^11.2.0",
     "image-to-pdf": "^2.0.0",
-    "luxon": "^3.4.4",
-    "prettier": "^3.3.2"
+    "luxon": "^3.5.0",
+    "prettier": "^3.4.2"
   },
   "prettier": {
     "semi": true,
