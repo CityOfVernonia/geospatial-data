@@ -128,7 +128,12 @@ const fileCheck = (feature) => {
   )
     .then((exists) => {
       if (!exists) {
-        if (SVY_IMAGE.includes('.jpg') || SVY_IMAGE.includes('.jpeg') || SVY_IMAGE.includes('.JPG') || SVY_IMAGE.includes('.JPEG'))
+        if (
+          SVY_IMAGE.includes('.jpg') ||
+          SVY_IMAGE.includes('.jpeg') ||
+          SVY_IMAGE.includes('.JPG') ||
+          SVY_IMAGE.includes('.JPEG')
+        )
           console.log(
             chalk.yellow(`${SVY_IMAGE} is a jpeg file. Validate proper PDF conversion. ${surveyUrl}${SVY_IMAGE}`),
           );
@@ -166,6 +171,8 @@ const createGeoJSON = async () => {
       f: 'geojson',
     });
 
+    // const types = [];
+
     geojson.features.forEach((feature) => {
       const { properties } = feature;
 
@@ -187,16 +194,29 @@ const createGeoJSON = async () => {
       properties.SVY_IMAGE = `${fileUrl}${properties.SVY_IMAGE.replace('.tiff', '.pdf')
         .replace('.tif', '.pdf')
         .replace('.jpg', '.pdf')
-        .replace('.jpeg', '.pdf')}`;
+        .replace('.jpeg', '.pdf')
+        .replace(' ', '%20')}`;
       Object.defineProperty(properties, 'SurveyUrl', Object.getOwnPropertyDescriptor(properties, 'SVY_IMAGE'));
       delete properties['SVY_IMAGE'];
 
-      // standardize properites
+      // standardize properties
       if (!properties.Client) properties.Client = 'Unknown';
       if (!properties.Comments) properties.Comments = 'None';
       if (!properties.Firm) properties.Firm = 'Unknown';
       if (!properties.SurveyType) properties.SurveyType = 'Unknown';
+
+      // survey types
+      if (properties.SurveyType === 'SUBDIVISION') properties.SurveyType = 'Subdivision';
       if (properties.SurveyType === 'SURVEY') properties.SurveyType = 'Survey';
+      if (properties.SurveyType === 'PARTITION') properties.SurveyType = 'Partition';
+      if (properties.SurveyType === 'CORNER RESTORATION') properties.SurveyType = 'Corner Restoration';
+      if (properties.SurveyType === '4') properties.SurveyType = 'Corner Restoration';
+      if (properties.SurveyType === '7') properties.SurveyType = 'Partition';
+      if (properties.SurveyType === '8') properties.SurveyType = 'Subdivision';
+      if (properties.SurveyType === '9') properties.SurveyType = 'Survey';
+
+      // if (types.indexOf(properties.SurveyType) === -1) types.push(properties.SurveyType);
+
       // ensure `Subdivision` is `null` if not a subdivision
       if (properties.SurveyType !== 'Subdivision') properties.Subdivision = null;
 
@@ -215,6 +235,8 @@ const createGeoJSON = async () => {
         properties.SurveyDate = 'Unknown';
       }
     });
+
+    // console.log(types);
 
     fs.writeFile(geoJSONFile, JSON.stringify(geojson));
   } catch (error) {
