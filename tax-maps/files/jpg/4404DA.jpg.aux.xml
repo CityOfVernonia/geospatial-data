@@ -1,11 +1,11 @@
 <PAMDataset>
   <Metadata domain="IMAGE_STRUCTURE">
-    <MDI key="COMPRESSION">JPEG</MDI>
-    <MDI key="INTERLEAVE">PIXEL</MDI>
     <MDI key="SOURCE_COLOR_SPACE">YCbCr</MDI>
+    <MDI key="INTERLEAVE">PIXEL</MDI>
+    <MDI key="COMPRESSION">JPEG</MDI>
   </Metadata>
   <Metadata domain="xml:ESRI" format="xml">
-    <GeodataXform xsi:type="typens:PolynomialXform" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:typens="http://www.esri.com/schemas/ArcGIS/3.1.0">
+    <GeodataXform xsi:type="typens:PolynomialXform" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:typens="http://www.esri.com/schemas/ArcGIS/3.4.0">
       <PolynomialOrder>1</PolynomialOrder>
       <SpatialReference xsi:type="typens:ProjectedCoordinateSystem">
         <WKT>PROJCS["NAD_1983_2011_Oregon_Statewide_Lambert_Ft_Intl",GEOGCS["GCS_NAD_1983_2011",DATUM["D_NAD_1983_2011",SPHEROID["GRS_1980",6378137.0,298.257222101]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Lambert_Conformal_Conic"],PARAMETER["False_Easting",1312335.958005249],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",-120.5],PARAMETER["Standard_Parallel_1",43.0],PARAMETER["Standard_Parallel_2",45.5],PARAMETER["Latitude_Of_Origin",41.75],UNIT["Foot",0.3048],AUTHORITY["EPSG",6557]]</WKT>
@@ -24,14 +24,14 @@
         <LatestWKID>6557</LatestWKID>
       </SpatialReference>
       <SourceGCPs xsi:type="typens:ArrayOfDouble">
-        <Double>2023.5064593025552</Double>
-        <Double>-4683.8314567941279</Double>
-        <Double>10042.341490120914</Double>
-        <Double>-5629.8609995244778</Double>
-        <Double>9919.5967080451173</Double>
-        <Double>-6116.7143107876182</Double>
-        <Double>1948.1170003308653</Double>
-        <Double>-6521.9100995566696</Double>
+        <Double>2030.3361337730985</Double>
+        <Double>-4678.9664908591658</Double>
+        <Double>10048.761713169166</Double>
+        <Double>-5625.2710502725095</Double>
+        <Double>9927.8212862361343</Double>
+        <Double>-6113.0222898125648</Double>
+        <Double>1957.1957177539371</Double>
+        <Double>-6518.0234833527356</Double>
       </SourceGCPs>
       <TargetGCPs xsi:type="typens:ArrayOfDouble">
         <Double>629298.0255460717</Double>
