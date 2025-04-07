@@ -12,10 +12,10 @@
     "@esri/arcgis-rest-feature-service": "^4.1.0",
     "chalk": "^5.4.1",
     "download": "^8.0.0",
-    "fs-extra": "^11.2.0",
+    "fs-extra": "^11.3.0",
     "image-to-pdf": "^3.0.2",
-    "luxon": "^3.5.0",
-    "prettier": "^3.4.2"
+    "luxon": "^3.6.1",
+    "prettier": "^3.5.3"
   },
   "prettier": {
     "semi": true,
