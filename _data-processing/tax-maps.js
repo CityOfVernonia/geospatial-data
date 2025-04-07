@@ -1,54 +1,83 @@
-import { readFile, writeFile } from 'fs';
-import { execFileSync } from 'child_process';
+import { promisify } from 'node:util';
+import fs from 'fs-extra';
+import { exec, execFileSync } from 'node:child_process';
 import download from 'download';
 import chalk from 'chalk';
 
-// tax map url
-const taxMapUrl = 'https://gis.columbiacountymaps.com/TaxMaps/';
+const _exec = promisify(exec);
 
-// array of tax maps
-let taxMaps;
+const GHOST_SCRIPT_VERSION = '10.05.0';
 
-// convert pdf to tiff into `tiff` directory
+// Columbia County tax map base URL
+const TAX_MAP_URL = 'https://gis.columbiacountymaps.com/TaxMaps/';
+
+/**
+ * Download PDF.
+ * @param {string} taxMap
+ */
+const downloadPdf = async (taxMap) => {
+  try {
+    const pdf = await download(`${TAX_MAP_URL}${taxMap}.pdf`);
+
+    writePdf(taxMap, pdf);
+  } catch (error) {
+    console.log(chalk.red(`Failed to download ${taxMap} PDF.`), error);
+  }
+};
+
+/**
+ * Convert pdf to jpg into `tax-maps/files/jpg` directory using GhostScript.
+ * @param {string} taxMap
+ */
 const pdf2jpeg = async (taxMap) => {
-  // convert pdf to jpg into `jpg` directory
   execFileSync(`gswin64c`, [
     `-sOutputFile=tax-maps/files/jpg/${taxMap}.jpg`,
     `-sDEVICE=jpeg`,
     `-r600`,
     `tax-maps/files/pdf/${taxMap}.pdf`,
   ]);
+
   console.log(chalk.green(`${taxMap}.pdf successfully converted.`));
 };
 
-// read list of tax maps
-readFile('tax-maps/tax-maps.txt', 'utf-8', (readError, readData) => {
-  //handle read error
-  if (readError) {
-    console.log(chalk.red('Failed to read tax map list.'), readError);
-    return;
+/**
+ * Write PDF file into `tax-maps/files/pdf`.
+ * @param {string} taxMap
+ * @param {Buffer} pdf
+ */
+const writePdf = async (taxMap, pdf) => {
+  try {
+    await fs.writeFile(`tax-maps/files/pdf/${taxMap}.pdf`, pdf);
+
+    pdf2jpeg(taxMap);
+  } catch (error) {
+    console.log(chalk.red(`Failed to write ${taxMap}.pdf.`), error);
   }
-  // array of tax maps
-  taxMaps = readData.split('\r\n');
-  // download tax maps and write to `pdf`
-  taxMaps.forEach(async (taxMap) => {
-    // download file
-    download(`${taxMapUrl}${taxMap}.pdf`)
-      .then(async (pdfData) => {
-        // write pdf
-        writeFile(`tax-maps/files/pdf/${taxMap}.pdf`, pdfData, (pdfWriteError) => {
-          // handle write error
-          if (pdfWriteError) {
-            console.log(chalk.red(`Failed to write ${taxMap}.pdf.`), pdfWriteError);
-            return;
-          }
-          // convert and jpg
-          pdf2jpeg(taxMap);
-        });
-      })
-      .catch((downloadError) => {
-        // handle download error
-        console.log(chalk.red(`Failed to download ${taxMap} PDF.`), downloadError);
-      });
-  });
-});
+};
+
+/**
+ * Check for GhostScript and run.
+ */
+(async () => {
+  try {
+    const gsVersion = (await _exec('gswin64c --version')).stdout;
+
+    if (gsVersion === `${GHOST_SCRIPT_VERSION}\n`) {
+      try {
+        const taxMaps = await fs.readFile('tax-maps/tax-maps.txt', 'utf-8');
+
+        taxMaps.split('\r\n').forEach(downloadPdf);
+      } catch (error) {
+        console.log(chalk.red('Failed to read tax map list.'), error);
+      }
+    } else {
+      console.log(chalk.red(`GhostScript version must be ${GHOST_SCRIPT_VERSION}.`));
+    }
+  } catch (error) {
+    console.log(
+      chalk.red(
+        `GhostScript (64-bit version ${GHOST_SCRIPT_VERSION}) must be installed and available via the command line.`,
+      ),
+    );
+  }
+}).call();

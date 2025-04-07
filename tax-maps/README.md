@@ -75,7 +75,7 @@ Georeferenced tax maps can be viewed overlaid with imagery and and other layers 
 
 ### Requirements
 
-[GhostScript](https://ghostscript.com/download.html) installed and `gswin64c` available via the command line.
+[GhostScript](https://ghostscript.com/download.html) installed and `gswin64c` available via the command line (64-bit version 10.05.0).
 
 ### Run
 
