@@ -1,159 +1,212 @@
-import fs from 'fs-extra';
-import util from 'node:util';
-import { exec } from 'child_process';
-import download from 'download';
 import chalk from 'chalk';
-import { queryFeatures } from '@esri/arcgis-rest-feature-service';
-import imgToPDF from 'image-to-pdf';
+import commandExists from 'command-exists';
 import { DateTime } from 'luxon';
-const _exec = util.promisify(exec);
+import download from 'download';
+import { exec } from 'node:child_process';
+import fs from 'fs-extra';
+import imgToPDF from 'image-to-pdf';
+import { promisify } from 'node:util';
+import { queryFeatures } from '@esri/arcgis-rest-feature-service';
+import { spatialExtent } from './_geometries.js';
+const _exec = promisify(exec);
 
-const featureServiceUrl =
+const FEATURE_SERVICE_URL =
   'https://gis.columbiacountymaps.com/server/rest/services/BaseData/Survey_Research/FeatureServer/0';
 
-const surveyUrl = 'https://gis.columbiacountymaps.com/Surveys/';
+const FILE_DIRECTORY = 'record-surveys/files/';
 
-const fileLocation = 'record-surveys/files/';
+const FILE_URL = 'https://cityofvernonia.github.io/geospatial-data/record-surveys/files/';
 
-const fileUrl = 'https://cityofvernonia.github.io/geospatial-data/record-surveys/files/';
+const GEOJSON_FILE = 'record-surveys/surveys.geojson';
 
-const geoJSONFile = 'record-surveys/surveys.geojson';
+const SURVEY_URL = 'https://gis.columbiacountymaps.com/Surveys/';
 
-const vernoniaSpatialExtent = {
-  rings: [
-    [
-      [606952.056605339, 1490512.4505739063],
-      [606952.056605339, 1529343.4065166563],
-      [650728.9227023721, 1529343.4065166563],
-      [650728.9227023721, 1490512.4505739063],
-      [606952.056605339, 1490512.4505739063],
-    ],
-  ],
-  spatialReference: { wkid: 102970, latestWkid: 6557 },
+/**
+ * Create MM/DD/YYYY date string from UTC milliseconds.
+ * @param {number} milliseconds
+ * @returns string
+ */
+const dateString = (milliseconds) => {
+  return DateTime.fromMillis(milliseconds).toUTC().toLocaleString(DateTime.DATE_SHORT);
 };
 
 /**
- * Convert tiff to pdf.
- * @param {*} file
- * @returns
+ * Normalize features properties.
+ * @param {GeoJSONFeature} feature
  */
-const tiff2pdf = async (file) => {
-  const parts = file.split('.');
-  if (parts[1] !== 'tif' && parts[1] !== 'tiff' && parts[1] !== 'TIF' && parts[1] !== 'TIFF') {
-    console.log(chalk.red(`${file} is not a tiff file.`));
+const normalizeFeatureProperties = (feature) => {
+  const { properties } = feature;
+
+  // remove non-useful string values
+  for (const property in properties) {
+    if (properties.hasOwnProperty(property) && properties[property] === ' ') properties[property] = null;
+
+    if (properties.hasOwnProperty(property) && properties[property] === '') properties[property] = null;
+
+    if (properties.hasOwnProperty(property) && properties[property] === 'None Given') properties[property] = null;
+  }
+
+  // create friendlier properties and set values
+  Object.defineProperty(properties, 'Sheets', Object.getOwnPropertyDescriptor(properties, 'NumberofSh'));
+  delete properties['NumberofSh'];
+
+  Object.defineProperty(properties, 'Subdivision', Object.getOwnPropertyDescriptor(properties, 'Subdivisio'));
+  delete properties['Subdivisio'];
+
+  Object.defineProperty(properties, 'SurveyId', Object.getOwnPropertyDescriptor(properties, 'SURVEYID'));
+  delete properties['SURVEYID'];
+
+  properties.SVY_IMAGE = `${FILE_URL}${properties.SVY_IMAGE.replace('.TIF', '.pdf')
+    .replace('.tif', '.pdf')
+    .replace('.jpg', '.pdf')
+    .replace(' ', '%20')}`;
+  Object.defineProperty(properties, 'SurveyUrl', Object.getOwnPropertyDescriptor(properties, 'SVY_IMAGE'));
+  delete properties['SVY_IMAGE'];
+
+  // standardize null properties
+  if (!properties.Client) properties.Client = 'Unknown';
+
+  if (!properties.Comments) properties.Comments = 'None';
+
+  if (!properties.Firm) properties.Firm = 'Unknown';
+
+  // survey types
+  switch (properties.SurveyType) {
+    case 'BPA':
+    case '1':
+      properties.SurveyType = 'BPA';
+      break;
+    case 'BT RECORD':
+    case '2':
+      properties.SurveyType = 'BT Record';
+      break;
+    case 'CONDOMINIUM':
+    case '3':
+      properties.SurveyType = 'Condominium';
+      break;
+    case 'CORNER RESTORATION':
+    case '4':
+      properties.SurveyType = 'Corner Restoration';
+      break;
+    case 'DATA SHEETS':
+    case '5':
+      properties.SurveyType = 'Data Sheets';
+      break;
+    case 'FIELD BOOKS':
+    case '6':
+      properties.SurveyType = 'Field Books';
+      break;
+    case 'PARTITION':
+    case '7':
+      properties.SurveyType = 'Partition';
+      break;
+    case 'SUBDIVISION':
+    case '8':
+      properties.SurveyType = 'Subdivision';
+      break;
+    case 'Survey':
+    case '9':
+      properties.SurveyType = 'Survey';
+      break;
+    default:
+      properties.SurveyType = 'Unknown';
+  }
+
+  // ensure Subdivision is null if not a subdivision
+  if (properties.SurveyType !== 'Subdivision') properties.Subdivision = null;
+
+  // timestamp for sorting (unknown = 1/1/1850 12:00 am UTC)
+  properties.Timestamp = properties.SurveyDate ? properties.SurveyDate : -3786825600000;
+
+  // date fields to MM/DD/YYYY strings
+  if (properties.FileDate) {
+    properties.FileDate = dateString(properties.FileDate);
+  } else {
+    properties.FileDate = 'Unknown';
+  }
+
+  if (properties.SurveyDate) {
+    properties.SurveyDate = dateString(properties.SurveyDate);
+  } else {
+    properties.SurveyDate = 'Unknown';
+  }
+};
+
+/**
+ * Download and convert image to PDF if it does not exist.
+ * @param {string} image
+ */
+const processRecordSurvey = async (image) => {
+  const parts = image.split('.');
+
+  const fileName = parts[0];
+
+  const fileExtension = parts[1];
+
+  const imageFile = `${FILE_DIRECTORY}${image}`;
+
+  const pdfFile = `${FILE_DIRECTORY}${fileName}.pdf`;
+
+  const url = `${SURVEY_URL}${image}`;
+
+  if (fileExtension.toLowerCase() !== 'tif' && fileExtension.toLowerCase() !== 'jpg') {
+    console.log(chalk.red(`File extension ${fileExtension} is not supported (${image}).`));
+
     return;
   }
-  await _exec(`tiff2pdf -z -o ${parts[0]}.pdf ${file}`);
-};
 
-/**
- * Convert jpeg to pdf.
- * @param {*} file
- * @returns
- */
-const jpeg2pdf = async (file) => {
-  const parts = file.split('.');
-  if (parts[1] !== 'jpg' && parts[1] !== 'jpeg' && parts[1] !== 'JPG' && parts[1] !== 'JPEG') {
-    console.log(chalk.red(`${file} is not a jpeg file.`));
-    return;
-  }
-  const stream = fs.createWriteStream(`${parts[0]}.pdf`);
-  stream.on('finish', () => {
-    fs.remove(file);
-  });
-  imgToPDF([file]).pipe(stream);
-};
-
-/**
- * Wrire file to `surveys` directory.
- * @param {*} SVY_IMAGE
- * @param {*} data
- */
-const fileWrite = async (SVY_IMAGE, data) => {
-  const file = `${fileLocation}${SVY_IMAGE}`;
-
-  fs.writeFile(file, data)
-    .then(async () => {
-      const type = file.split('.')[1];
-      if (type === 'tif' || type === 'tiff' || type === 'TIF' || type === 'TIFF') {
-        try {
-          await tiff2pdf(file);
-          fs.remove(file);
-        } catch (error) {
-          console.log(chalk.red(`tiff2pdf ${SVY_IMAGE} write failed.`, error));
-        }
-      }
-      if (type === 'jpg' || type === 'jpeg' || type === 'JPG' || type === 'JPEG') {
-        jpeg2pdf(file);
-      }
-    })
-    .catch((error) => {
-      console.log(chalk.red(`${SVY_IMAGE} write failed.`, error));
-    });
-};
-
-/**
- * Download file.
- * @param {*} SVY_IMAGE
- */
-const fileDownload = (SVY_IMAGE) => {
-  download(`${surveyUrl}${SVY_IMAGE}`)
-    .then((data) => {
-      fileWrite(SVY_IMAGE, data);
-    })
-    .catch(() => {
-      console.log(chalk.red(`${SVY_IMAGE} download failed.`));
-    });
-};
-
-/**
- * Check if file already exists.
- * @param {*} feature
- */
-const fileCheck = (feature) => {
-  const {
-    attributes: { SVY_IMAGE },
-  } = feature;
-
-  fs.exists(
-    `${fileLocation}${SVY_IMAGE}`
-      .replace('.tiff', '.pdf')
-      .replace('.TIFF', '.pdf')
-      .replace('.tif', '.pdf')
-      .replace('.TIF', '.pdf')
-      .replace('.jpg', '.pdf')
-      .replace('.JPG', '.pdf')
-      .replace('.jpeg', '.pdf')
-      .replace('.JPEG', '.pdf'),
-  )
-    .then((exists) => {
-      if (!exists) {
-        if (
-          SVY_IMAGE.includes('.jpg') ||
-          SVY_IMAGE.includes('.jpeg') ||
-          SVY_IMAGE.includes('.JPG') ||
-          SVY_IMAGE.includes('.JPEG')
-        )
-          console.log(
-            chalk.yellow(`${SVY_IMAGE} is a jpeg file. Validate proper PDF conversion. ${surveyUrl}${SVY_IMAGE}`),
-          );
-        fileDownload(SVY_IMAGE);
-      }
-    })
-    .catch((error) => {
-      console.log(chalk.red(`File: ${fileLocation}${SVY_IMAGE} exists error.`, error));
-    });
-};
-
-/**
- * Download survey geojson, properties transformations, and write `surveys.geojson`.
- */
-const createGeoJSON = async () => {
   try {
+    const exists = await fs.exists(pdfFile);
+
+    if (exists) return;
+
+    const imageData = await download(url);
+
+    await fs.writeFile(imageFile, imageData);
+
+    if (fileExtension.toLowerCase() === 'tif') {
+      await _exec(`tiff2pdf -z -o ${pdfFile} ${imageFile}`);
+
+      await fs.remove(imageFile);
+    }
+
+    if (fileExtension.toLowerCase() === 'jpg') {
+      const stream = fs.createWriteStream(pdfFile);
+
+      stream.on('finish', async () => {
+        await fs.remove(imageFile);
+      });
+
+      await imgToPDF([imageFile]).pipe(stream);
+
+      chalk.yellow(`${image} is a jpeg file. Validate proper PDF conversion (image -> pdf dimensions). ${url}`);
+    }
+
+    console.log(chalk.green(`Survey ${fileName} successfully created.`));
+  } catch (error) {
+    if (error.statusCode && error.statusCode === 404) {
+      console.log(chalk.red(`Survey image ${image} does not exist at ${url}.`));
+    } else {
+      console.log(error);
+    }
+  }
+};
+
+/**
+ * Check for tiff2pdf and run.
+ */
+(async () => {
+  try {
+    await commandExists('tiff2pdf');
+
+    console.log(chalk.green('Running record surveys...'));
+
+    const images = [];
+
     const geojson = await queryFeatures({
-      url: featureServiceUrl,
-      geometry: vernoniaSpatialExtent,
-      returnGeometry: true,
+      f: 'geojson',
+      geometry: spatialExtent,
+      geometryType: 'esriGeometryPolygon',
       outFields: [
         'Client',
         'Comments',
@@ -166,103 +219,27 @@ const createGeoJSON = async () => {
         'SurveyType',
         'Subdivisio',
       ],
+      url: FEATURE_SERVICE_URL,
+      returnGeometry: false,
       spatialRel: 'esriSpatialRelIntersects',
-      geometryType: 'esriGeometryPolygon',
-      f: 'geojson',
     });
 
-    // const types = [];
+    console.log(chalk.green(`${geojson.features.length} record surveys returned.`));
 
     geojson.features.forEach((feature) => {
-      const { properties } = feature;
+      images.push(feature.properties.SVY_IMAGE);
 
-      // remove unuseful string valaues
-      for (const property in properties) {
-        if (properties.hasOwnProperty(property) && properties[property] === ' ') properties[property] = null;
-        if (properties.hasOwnProperty(property) && properties[property] === '') properties[property] = null;
-        if (properties.hasOwnProperty(property) && properties[property] === 'None Given') properties[property] = null;
-      }
-
-      // create friendlier properties and set values
-      Object.defineProperty(properties, 'Sheets', Object.getOwnPropertyDescriptor(properties, 'NumberofSh'));
-      delete properties['NumberofSh'];
-      Object.defineProperty(properties, 'Subdivision', Object.getOwnPropertyDescriptor(properties, 'Subdivisio'));
-      delete properties['Subdivisio'];
-      Object.defineProperty(properties, 'SurveyId', Object.getOwnPropertyDescriptor(properties, 'SURVEYID'));
-      delete properties['SURVEYID'];
-      // url to PDF
-      properties.SVY_IMAGE = `${fileUrl}${properties.SVY_IMAGE.replace('.tiff', '.pdf')
-        .replace('.tif', '.pdf')
-        .replace('.jpg', '.pdf')
-        .replace('.jpeg', '.pdf')
-        .replace(' ', '%20')}`;
-      Object.defineProperty(properties, 'SurveyUrl', Object.getOwnPropertyDescriptor(properties, 'SVY_IMAGE'));
-      delete properties['SVY_IMAGE'];
-
-      // standardize properties
-      if (!properties.Client) properties.Client = 'Unknown';
-      if (!properties.Comments) properties.Comments = 'None';
-      if (!properties.Firm) properties.Firm = 'Unknown';
-      if (!properties.SurveyType) properties.SurveyType = 'Unknown';
-
-      // survey types
-      if (properties.SurveyType === 'SUBDIVISION') properties.SurveyType = 'Subdivision';
-      if (properties.SurveyType === 'SURVEY') properties.SurveyType = 'Survey';
-      if (properties.SurveyType === 'PARTITION') properties.SurveyType = 'Partition';
-      if (properties.SurveyType === 'CORNER RESTORATION') properties.SurveyType = 'Corner Restoration';
-      if (properties.SurveyType === '4') properties.SurveyType = 'Corner Restoration';
-      if (properties.SurveyType === '7') properties.SurveyType = 'Partition';
-      if (properties.SurveyType === '8') properties.SurveyType = 'Subdivision';
-      if (properties.SurveyType === '9') properties.SurveyType = 'Survey';
-
-      // if (types.indexOf(properties.SurveyType) === -1) types.push(properties.SurveyType);
-
-      // ensure `Subdivision` is `null` if not a subdivision
-      if (properties.SurveyType !== 'Subdivision') properties.Subdivision = null;
-
-      // timestamp for sorting
-      properties.Timestamp = properties.SurveyDate ? properties.SurveyDate : 0;
-
-      // Date fields to `MM/DD/YYYY` strings
-      if (properties.FileDate) {
-        properties.FileDate = DateTime.fromMillis(properties.FileDate).toUTC().toLocaleString(DateTime.DATE_SHORT);
-      } else {
-        properties.FileDate = 'Unknown';
-      }
-      if (properties.SurveyDate) {
-        properties.SurveyDate = DateTime.fromMillis(properties.SurveyDate).toUTC().toLocaleString(DateTime.DATE_SHORT);
-      } else {
-        properties.SurveyDate = 'Unknown';
-      }
+      normalizeFeatureProperties(feature);
     });
 
-    // console.log(types);
+    await fs.writeFile(GEOJSON_FILE, JSON.stringify(geojson));
 
-    fs.writeFile(geoJSONFile, JSON.stringify(geojson));
+    images.forEach(processRecordSurvey);
   } catch (error) {
-    console.log(chalk.red('create geojson error', error));
+    if (error === null) {
+      console.log(chalk.red(`tiff2pdf must be installed and available via the command line.`));
+    } else {
+      console.log(error);
+    }
   }
-};
-
-/**
- * Query surveys within spatial extent.
- */
-const downloadFeatures = async () => {
-  try {
-    const queryResult = await queryFeatures({
-      url: featureServiceUrl,
-      geometry: vernoniaSpatialExtent,
-      returnGeometry: false,
-      outFields: ['SVY_IMAGE'],
-      spatialRel: 'esriSpatialRelIntersects',
-      geometryType: 'esriGeometryPolygon',
-    });
-    console.log(chalk.yellow(`${queryResult.features.length} results`));
-    queryResult.features.forEach(fileCheck);
-    createGeoJSON();
-  } catch (error) {
-    console.log(chalk.red('Query features error', error));
-  }
-};
-
-downloadFeatures();
+}).call();
