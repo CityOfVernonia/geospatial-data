@@ -1,7 +1,7 @@
 {
   "type": "module",
   "scripts": {
-    "annexations": "node _data-processing/annexations.js",
+    "city-annexations": "node _data-processing/city-annexations.js",
     "flood-hazard": "node _data-processing/flood-hazard.js",
     "letter-of-map-amendments": "node _data-processing/letter-of-map-amendments.js",
     "record-surveys": "node _data-processing/record-surveys.js",

@@ -17,11 +17,11 @@ const geoJSONLayer = new GeoJSONLayer(await (await fetch(url, { cache: 'reload' 
 map.add(geoJSONLayer);
 ```
 
-## Data Sets
+## Data
 
-### [Boundaries](boundaries)
+### [City Annexations](city-annexations)
 
-Municipal boundaries and related data.
+Annexations and de-annexations to the municipal boundary of Vernonia.
 
 ### [Elevation Certificates](elevation-certificates)
 
