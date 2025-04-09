@@ -103,6 +103,6 @@ npm run tax-map-boundaries
 
 The City of Vernonia is an Equal Opportunity Employer and Provider
 
-Copyright © 2023 City of Vernonia, Oregon
+Copyright © 2025 City of Vernonia, Oregon
 
 Made with :heart: and :coffee: in Vernonia, Oregon

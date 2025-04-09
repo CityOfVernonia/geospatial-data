@@ -37,6 +37,10 @@ FEMA flood layers, i.e., flood zones, base flood elevations, etc.
 
 Datasets to support floodplain management.
 
+### [Letter of Map Amendments](letter-of-map-amendments)
+
+FEMA Letter of Map Amendments (LOMAs) within Vernonia City Limits.
+
 ### [Record Surveys](record-surveys)
 
 Columbia County record surveys within the Vernonia spatial extent.
@@ -53,6 +57,6 @@ See [Change Log](CHANGELOG).
 
 The City of Vernonia is an Equal Opportunity Employer and Provider
 
-Copyright © 2023 City of Vernonia, Oregon
+Copyright © 2025 City of Vernonia, Oregon
 
 Made with :heart: and :coffee: in Vernonia, Oregon

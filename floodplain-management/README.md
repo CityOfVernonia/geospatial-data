@@ -39,6 +39,6 @@ FEMA defines the SFHA as _the area that will be inundated by the flood event hav
 
 The City of Vernonia is an Equal Opportunity Employer and Provider
 
-Copyright © 2023 City of Vernonia, Oregon
+Copyright © 2025 City of Vernonia, Oregon
 
 Made with :heart: and :coffee: in Vernonia, Oregon

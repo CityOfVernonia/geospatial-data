@@ -1,10 +1,9 @@
 import chalk from 'chalk';
 import commandExists from 'command-exists';
 import download from 'download';
-import { exec, execFileSync } from 'node:child_process';
+import { execFileSync } from 'node:child_process';
 import fs from 'fs-extra';
-import { promisify } from 'node:util';
-const _exec = promisify(exec);
+import { execute, TAX_MAPS } from './_utils.js';
 
 const GHOST_SCRIPT_VERSION = '10.05.0';
 
@@ -13,8 +12,6 @@ const JPG_DIRECTORY = 'tax-maps/files/jpg/';
 const PDF_DIRECTORY = 'tax-maps/files/pdf/';
 
 const TAX_MAP_URL = 'https://gis.columbiacountymaps.com/TaxMaps/';
-
-const TAX_MAPS_TXT = 'tax-maps/tax-maps.txt';
 
 /**
  * Download, write and convert tax map.
@@ -43,12 +40,12 @@ const processTaxMap = async (taxMap) => {
   try {
     await commandExists('gswin64c');
 
-    const gsVersion = (await _exec('gswin64c --version')).stdout;
+    const gsVersion = (await execute('gswin64c --version')).stdout;
 
     if (gsVersion.includes(GHOST_SCRIPT_VERSION)) {
       console.log(chalk.green('Running tax maps...'));
 
-      (await fs.readFile(TAX_MAPS_TXT, 'utf-8')).split('\r\n').forEach(processTaxMap);
+      TAX_MAPS.forEach(processTaxMap);
     } else {
       console.log(chalk.red(`GhostScript version must be ${GHOST_SCRIPT_VERSION}.`));
     }

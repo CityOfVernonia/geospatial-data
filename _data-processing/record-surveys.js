@@ -1,14 +1,10 @@
 import chalk from 'chalk';
 import commandExists from 'command-exists';
-import { DateTime } from 'luxon';
 import download from 'download';
-import { exec } from 'node:child_process';
 import fs from 'fs-extra';
 import imgToPDF from 'image-to-pdf';
-import { promisify } from 'node:util';
 import { queryFeatures } from '@esri/arcgis-rest-feature-service';
-import { spatialExtent } from './_geometries.js';
-const _exec = promisify(exec);
+import { execute, dateString, SPATIAL_EXTENT } from './_utils.js';
 
 const FEATURE_SERVICE_URL =
   'https://gis.columbiacountymaps.com/server/rest/services/BaseData/Survey_Research/FeatureServer/0';
@@ -20,15 +16,6 @@ const FILE_URL = 'https://cityofvernonia.github.io/geospatial-data/record-survey
 const GEOJSON_FILE = 'record-surveys/surveys.geojson';
 
 const SURVEY_URL = 'https://gis.columbiacountymaps.com/Surveys/';
-
-/**
- * Create MM/DD/YYYY date string from UTC milliseconds.
- * @param {number} milliseconds
- * @returns string
- */
-const dateString = (milliseconds) => {
-  return DateTime.fromMillis(milliseconds).toUTC().toLocaleString(DateTime.DATE_SHORT);
-};
 
 /**
  * Normalize features properties.
@@ -165,7 +152,7 @@ const processRecordSurvey = async (image) => {
     await fs.writeFile(imageFile, imageData);
 
     if (fileExtension.toLowerCase() === 'tif') {
-      await _exec(`tiff2pdf -z -o ${pdfFile} ${imageFile}`);
+      await execute(`tiff2pdf -z -o ${pdfFile} ${imageFile}`);
 
       await fs.remove(imageFile);
     }
@@ -205,7 +192,7 @@ const processRecordSurvey = async (image) => {
 
     const geojson = await queryFeatures({
       f: 'geojson',
-      geometry: spatialExtent,
+      geometry: SPATIAL_EXTENT,
       geometryType: 'esriGeometryPolygon',
       outFields: [
         'Client',
@@ -220,7 +207,7 @@ const processRecordSurvey = async (image) => {
         'Subdivisio',
       ],
       url: FEATURE_SERVICE_URL,
-      returnGeometry: false,
+      returnGeometry: true,
       spatialRel: 'esriSpatialRelIntersects',
     });
 
