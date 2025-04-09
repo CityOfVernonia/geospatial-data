@@ -37,8 +37,18 @@
       "type": "string"
     },
     {
-      "alias": "Determination letter url",
+      "alias": "File id",
+      "name": "file_id",
+      "type": "string"
+    },
+    {
+      "alias": "Determination letter url (City)",
       "name": "city_url",
+      "type": "string"
+    },
+    {
+      "alias": "Determination letter url (FEMA)",
+      "name": "fema_url",
       "type": "string"
     }
   ],
@@ -47,7 +57,7 @@
       "labelExpressionInfo": {
         "expression": "$feature.case_number + TextFormatting.NewLine + $feature.date"
       },
-      "minScale": 1500,
+      "minScale": 4000,
       "symbol": {
         "color": "darkviolet",
         "font": {
@@ -89,7 +99,7 @@
             "label": "Outcome"
           },
           {
-            "fieldName": "url",
+            "fieldName": "city_url",
             "label": "Determination letter"
           }
         ],
