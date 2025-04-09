@@ -6,7 +6,9 @@ FEMA Elevation Certificates of record within the Vernonia special flood hazard a
 
 **CSVLayer JSON:** [elevation-certificates.json](elevation-certificates.json) ([preview](../preview.html?csv=https%3A%2F%2Fcityofvernonia.github.io%2Fgeospatial-data%2Felevation-certificates%2Felevation-certificates.json))
 
-## Fields
+**Copyright:** FEMA and City of Vernonia, Oregon
+
+**Fields**
 
 - **Latitude**
 - **Longitude**
@@ -22,14 +24,22 @@ FEMA Elevation Certificates of record within the Vernonia special flood hazard a
 - **LowestMechanical** - Lowest mechanical elevation of the structure
 - **ElevCertURL** - URL of the elevation certificate PDF
 
-## Elevation Certificate PDF Naming Convention
+**Elevation Certificate PDF Naming Convention**
 
 **\<YYYY\>\<MM\>\<DD\>-\<ADDRESS\>.pdf**
 
 Spaces in address replaced with underscores.
 
-## Files
+### Files
 
-| Latitude | Longitude   | Address           | Date      |                  PDF                   |
-| -------- | ----------- | ----------------- | --------- | :------------------------------------: |
-| 45.86193 | -123.188289 | 1026 State Avenue | 5/28/2024 | [View](20240528-1206_State_Avenue.pdf) |
+| Latitude | Longitude   | Address           | Date      |                     PDF                      |
+| -------- | ----------- | ----------------- | --------- | :------------------------------------------: |
+| 45.86193 | -123.188289 | 1026 State Avenue | 5/28/2024 | [View](files/20240528-1206_State_Avenue.pdf) |
+
+---
+
+The City of Vernonia is an Equal Opportunity Employer and Provider
+
+Copyright © 2025 City of Vernonia, Oregon
+
+Made with :heart: and :coffee: in Vernonia, Oregon

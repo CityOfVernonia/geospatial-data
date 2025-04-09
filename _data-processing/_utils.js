@@ -1,5 +1,7 @@
+import chalk from 'chalk';
 import { DateTime } from 'luxon';
 import { exec } from 'node:child_process';
+import fs from 'fs-extra';
 import { promisify } from 'node:util';
 
 ////////////////////////////////////////////////////////
@@ -675,6 +677,36 @@ export const TAX_MAPS = [
 ////////////////////////////////////////////////////////
 // Helpers
 ////////////////////////////////////////////////////////
+
+/**
+ * Clean GeoJSON features exported from ArcGIS Pro.
+ * @param {string} file GeoJSON file location on disk
+ */
+export const cleanFeatures = async (file) => {
+  try {
+    const text = await fs.readFile(file, 'utf-8');
+
+    const geojson = JSON.parse(text);
+
+    geojson.features.forEach((feature) => {
+      const { properties } = feature;
+
+      delete feature['id'];
+
+      delete properties['OBJECTID'];
+
+      delete properties['Shape_Area'];
+
+      delete properties['Shape_Length'];
+    });
+
+    await fs.writeFile(file, JSON.stringify(geojson));
+
+    console.log(chalk.green(`Cleaned ${file} file.`));
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 /**
  * Create MM/DD/YYYY date string from UTC milliseconds.

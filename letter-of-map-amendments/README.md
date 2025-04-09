@@ -31,7 +31,7 @@ FEMA Letter of Map Amendments (LOMAs) within Vernonia City Limits.
 }
 ```
 
-## Update GeoJSON and download associated PDFs
+### Update
 
 ```shell
 npm run letter-of-map-amendments

@@ -29,6 +29,18 @@ Annexations and de-annexations to the municipal boundary of Vernonia.
 }
 ```
 
+### Update
+
+**Requirements**
+
+[libtiff](http://www.libtiff.org/) available via the command line.
+
+**Run**
+
+```shell
+npm run record-surveys
+```
+
 ---
 
 The City of Vernonia is an Equal Opportunity Employer and Provider

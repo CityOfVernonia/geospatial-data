@@ -4,35 +4,6 @@ Columbia County tax maps within and adjacent to Vernonia City Limits.
 
 Files are included as JPEGs and PDFs. JPEGs are georeferenced via the accompanying `*.aux.xml` file in spatial reference NAD 1983 (2011) Oregon Statewide Lambert (Intl Feet) _WKID 6557_.
 
-Georeferenced tax maps can be viewed overlaid with imagery and and other layers in [Vernonia Map](https://map.vernonia-or.gov/) using the Tax Maps tool.
-
-![Tax Maps](screenshot.jpg 'Tax Maps')
-
-**GeoJSON:** [tax-map-boundaries.geojson](tax-map-boundaries.geojson)
-
-**GeoJSONLayer JSON:** [tax-map-boundaries.json](tax-map-boundaries.json) ([preview](../preview.html?geojson=https%3A%2F%2Fcityofvernonia.github.io%2Fgeospatial-data%2Ftax-maps%2Ftax-map-boundaries.json))
-
-**Updated:** 2023.10.02
-
-**Copyright:** Columbia County, Oregon and City of Vernonia, Oregon
-
-**Properties/Attributes:**
-
-```json
-{
-  "type": "Feature",
-  "geometry": {},
-  "properties": {
-    "name": "4N 4W 3",
-    "taxmap": "4403",
-    "county_url": "https://gis.columbiacountymaps.com/TaxMaps/4403.pdf",
-    "city_url": "https://cityofvernonia.github.io/geospatial-data/tax-maps/files/pdf/4403.pdf"
-  }
-}
-```
-
-**PDFs and JPEGs:**
-
 | Tax Map |                PDF                 |                JPEG                |                    Georeference                    | Last Updated |
 | ------- | :--------------------------------: | :--------------------------------: | :------------------------------------------------: | :----------: |
 | 4403    |   [4403.pdf](files/pdf/4403.pdf)   |   [4403.jpg](files/jpg/4403.jpg)   |   [4403.jpg.aux.xml](files/jpg/4403.jpg.aux.xml)   |  2023.06.05  |
@@ -71,33 +42,21 @@ Georeferenced tax maps can be viewed overlaid with imagery and and other layers 
 | 5434CC  | [5434CC.pdf](files/pdf/5434CC.pdf) | [5434CC.jpg](files/jpg/5434CC.jpg) | [5434CC.jpg.aux.xml](files/jpg/5434CC.jpg.aux.xml) |     n/a      |
 | 5434CD  | [5434CD.pdf](files/pdf/5434CD.pdf) | [5434CD.jpg](files/jpg/5434CD.jpg) | [5434CD.jpg.aux.xml](files/jpg/5434CD.jpg.aux.xml) |     n/a      |
 
-## Update Tax Map PDFs and JPEGs
+### Update
 
-### Requirements
+**Requirements**
 
 [GhostScript](https://ghostscript.com/download.html) installed and `gswin64c` available via the command line (64-bit version 10.05.0).
 
-### Run
+**Run**
 
 ```shell
 npm run tax-maps
 ```
 
-### Use in ArcGIS Pro
+**Use in ArcGIS Pro**
 
 Add `files/jpg` directory to a Pro project and add images to a map. Update georeference for any updated JPEGs.
-
-## Update Tax Map Boundaries
-
-### Update and Export
-
-Update `TaxMapBoundaries` feature class in `Tax Maps Georeference` ArcGIS Pro project and export as `tax-map-boundaries.geojson`.
-
-### Run
-
-```shell
-npm run tax-map-boundaries
-```
 
 ---
 

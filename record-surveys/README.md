@@ -2,10 +2,6 @@
 
 Columbia County record surveys and plats within the Vernonia spatial extent.
 
-Check out the _Survey Search_ tool in [Vernonia Map](https://map.vernonia-or.gov/) to quickly find and view PDFs of surveys related to a tax lot.
-
-![Survey Search](screenshot.jpg 'Survey Search')
-
 **GeoJSON:** [surveys.geojson](surveys.geojson)
 
 **GeoJSONLayer JSON:** [surveys.json](surveys.json) ([preview](../preview.html?geojson=https%3A%2F%2Fcityofvernonia.github.io%2Fgeospatial-data%2Frecord-surveys%2Fsurveys.json))
@@ -36,13 +32,13 @@ Check out the _Survey Search_ tool in [Vernonia Map](https://map.vernonia-or.gov
 }
 ```
 
-## Update
+### Update
 
-### Requirements
+**Requirements**
 
 [libtiff](http://www.libtiff.org/) available via the command line.
 
-### Run
+**Run**
 
 ```shell
 npm run record-surveys
