@@ -31,8 +31,16 @@ FEMA Letter of Map Amendments (LOMAs) within Vernonia City Limits.
 }
 ```
 
-### Update GeoJSON and download associated PDFs
+## Update GeoJSON and download associated PDFs
 
 ```shell
 npm run letter-of-map-amendments
 ```
+
+---
+
+The City of Vernonia is an Equal Opportunity Employer and Provider
+
+Copyright © 2025 City of Vernonia, Oregon
+
+Made with :heart: and :coffee: in Vernonia, Oregon

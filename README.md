@@ -17,9 +17,7 @@ const geoJSONLayer = new GeoJSONLayer(await (await fetch(url, { cache: 'reload' 
 map.add(geoJSONLayer);
 ```
 
-It's just that easy.
-
-## Data Categories
+## Data Sets
 
 ### [Boundaries](boundaries)
 
@@ -27,15 +25,7 @@ Municipal boundaries and related data.
 
 ### [Elevation Certificates](elevation-certificates)
 
-FEMA Elevation Certificates of record within the Vernonia special flood hazard area (SFHA).
-
-### [Flood Hazard](flood-hazard)
-
-FEMA flood layers, i.e., flood zones, base flood elevations, etc.
-
-### [Floodplain Management](floodplain-management)
-
-Datasets to support floodplain management.
+FEMA Elevation Certificates of record within the Vernonia special flood hazard area.
 
 ### [Letter of Map Amendments](letter-of-map-amendments)
 

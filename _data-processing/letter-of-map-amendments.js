@@ -14,6 +14,10 @@ const FILES_DIRECTORY = 'letter-of-map-amendments/files/';
 
 const GEOJSON_FILE = 'letter-of-map-amendments/letter-of-map-amendments.geojson';
 
+/**
+ * Download PDF if it does not exist.
+ * @param {GeoJSONFeature} feature
+ */
 const downloadFile = async (feature) => {
   const {
     properties: { file_id, fema_url },
