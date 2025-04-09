@@ -194,6 +194,7 @@ const processRecordSurvey = async (image) => {
       f: 'geojson',
       geometry: SPATIAL_EXTENT,
       geometryType: 'esriGeometryPolygon',
+      orderByFields: ['OBJECTID ASC'],
       outFields: [
         'Client',
         'Comments',

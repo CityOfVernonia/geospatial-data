@@ -36,7 +36,7 @@ Columbia County record surveys and plats within the Vernonia spatial extent.
 
 **Requirements**
 
-[libtiff](http://www.libtiff.org/) available via the command line.
+[libtiff](http://www.libtiff.org/) installed and `tiff2pdf` available via the command line.
 
 **Run**
 
