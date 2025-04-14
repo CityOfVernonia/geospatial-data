@@ -37,7 +37,7 @@ Columbia County record surveys within the Vernonia spatial extent.
 
 ### [Tax Map Boundaries](tax-map-boundaries)
 
-Columbia County tax maps within and adjacent to Vernonia City Limits.
+Columbia County tax map boundaries within and adjacent to Vernonia City Limits.
 
 ### [Tax Maps](tax-maps)
 
