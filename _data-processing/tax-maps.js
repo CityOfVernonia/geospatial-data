@@ -14,26 +14,6 @@ const PDF_DIRECTORY = 'tax-maps/files/pdf/';
 const TAX_MAP_URL = 'https://gis.columbiacountymaps.com/TaxMaps/';
 
 /**
- * Download, write and convert tax map.
- * @param {string} taxMap
- */
-const processTaxMap = async (taxMap) => {
-  try {
-    const pdf = await download(`${TAX_MAP_URL}${taxMap}.pdf`);
-
-    const pdfFile = `${PDF_DIRECTORY}${taxMap}.pdf`;
-
-    await fs.writeFile(pdfFile, pdf);
-
-    execFileSync('gswin64c', [`-sOutputFile=${JPG_DIRECTORY}${taxMap}.jpg`, '-sDEVICE=jpeg', '-r600', pdfFile]);
-
-    console.log(chalk.green(`${taxMap}.pdf successfully processed.`));
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-/**
  * Check for GhostScript and run.
  */
 (async () => {
@@ -45,7 +25,17 @@ const processTaxMap = async (taxMap) => {
     if (gsVersion.includes(GHOST_SCRIPT_VERSION)) {
       console.log(chalk.green('Running tax maps...'));
 
-      TAX_MAPS.forEach(processTaxMap);
+      for (const taxMap of TAX_MAPS) {
+        const pdf = await download(`${TAX_MAP_URL}${taxMap}.pdf`);
+
+        const pdfFile = `${PDF_DIRECTORY}${taxMap}.pdf`;
+
+        await fs.writeFile(pdfFile, pdf);
+
+        execFileSync('gswin64c', [`-sOutputFile=${JPG_DIRECTORY}${taxMap}.jpg`, '-sDEVICE=jpeg', '-r600', pdfFile]);
+
+        console.log(chalk.green(`${taxMap}.pdf successfully processed.`));
+      }
     } else {
       console.log(chalk.red(`GhostScript version must be ${GHOST_SCRIPT_VERSION}.`));
     }
@@ -56,7 +46,17 @@ const processTaxMap = async (taxMap) => {
           `GhostScript (64-bit version ${GHOST_SCRIPT_VERSION}) must be installed and available via the command line.`,
         ),
       );
+    } else if (error && error.hasOwnProperty('code')) {
+      console.log(chalk.red(`Spawning child process for gswin64c failed with ${error.code}.`));
+    } else if (error && error.hasOwnProperty('stdout') && error.hasOwnProperty('stderr')) {
+      console.log(chalk.red('Spawned child process for gswin64c but exited with non-zero exit code.'));
+
+      console.log(error.stdout);
+
+      console.log(error.stderr);
     } else {
+      console.log(chalk.red('An error has occurred (probably with fs.writeFile).'));
+
       console.log(error);
     }
   }
