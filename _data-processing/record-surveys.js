@@ -57,6 +57,8 @@ const normalizeFeatureProperties = (feature) => {
 
   if (!properties.Firm) properties.Firm = 'Unknown';
 
+  if (!properties.Sheets) properties.Sheets = 0;
+
   // survey types
   switch (properties.SurveyType) {
     case 'BPA':
