@@ -16,7 +16,7 @@
     "fs-extra": "^11.3.0",
     "image-to-pdf": "^3.0.2",
     "luxon": "^3.6.1",
-    "prettier": "^3.5.3"
+    "prettier": "^3.6.1"
   },
   "prettier": {
     "semi": true,

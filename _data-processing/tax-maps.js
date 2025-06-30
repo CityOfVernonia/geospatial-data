@@ -5,7 +5,7 @@ import { execFileSync } from 'node:child_process';
 import fs from 'fs-extra';
 import { execute, TAX_MAPS } from './_utils.js';
 
-const GHOST_SCRIPT_VERSION = '10.05.0';
+const GHOST_SCRIPT_VERSION = '10.05.1';
 
 const JPG_DIRECTORY = 'tax-maps/files/jpg/';
 
