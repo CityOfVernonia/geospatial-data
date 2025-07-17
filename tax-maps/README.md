@@ -27,7 +27,7 @@ Files are included as JPEGs and PDFs. JPEGs are georeferenced via the accompanyi
 | 4405AA  | [4405AA.pdf](files/pdf/4405AA.pdf) | [4405AA.jpg](files/jpg/4405AA.jpg) | [4405AA.jpg.aux.xml](files/jpg/4405AA.jpg.aux.xml) |  2024.05.06  |
 | 4405AC  | [4405AC.pdf](files/pdf/4405AC.pdf) | [4405AC.jpg](files/jpg/4405AC.jpg) | [4405AC.jpg.aux.xml](files/jpg/4405AC.jpg.aux.xml) |  2025.03.20  |
 | 4405AD  | [4405AD.pdf](files/pdf/4405AD.pdf) | [4405AD.jpg](files/jpg/4405AD.jpg) | [4405AD.jpg.aux.xml](files/jpg/4405AD.jpg.aux.xml) |  2025.03.20  |
-| 4405DA  | [4405DA.pdf](files/pdf/4405DA.pdf) | [4405DA.jpg](files/jpg/4405DA.jpg) | [4405DA.jpg.aux.xml](files/jpg/4405DA.jpg.aux.xml) |  2025.03.20  |
+| 4405DA  | [4405DA.pdf](files/pdf/4405DA.pdf) | [4405DA.jpg](files/jpg/4405DA.jpg) | [4405DA.jpg.aux.xml](files/jpg/4405DA.jpg.aux.xml) |  2025.07.17  |
 | 4405DD  | [4405DD.pdf](files/pdf/4405DD.pdf) | [4405DD.jpg](files/jpg/4405DD.jpg) | [4405DD.jpg.aux.xml](files/jpg/4405DD.jpg.aux.xml) |  2024.06.28  |
 | 4406    |   [4406.pdf](files/pdf/4406.pdf)   |   [4406.jpg](files/jpg/4406.jpg)   |   [4406.jpg.aux.xml](files/jpg/4406.jpg.aux.xml)   |  2025.06.04  |
 | 4407    |   [4407.pdf](files/pdf/4407.pdf)   |   [4407.jpg](files/jpg/4407.jpg)   |   [4407.jpg.aux.xml](files/jpg/4407.jpg.aux.xml)   |  2023.05.05  |
