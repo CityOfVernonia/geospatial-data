@@ -1,21 +1,6 @@
 # City of Vernonia Geospatial Data
 
-![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/CityOfVernonia/geospatial-data?color=success&style=flat-square)
-
 Relatively small and static (or very rarely updated) geospatial datasets and related data products for use in web applications to support of City business.
-
-## Use
-
-Along with each GeoJSON file is a same named JSON file containing the [ArcGIS Maps SDK for JavaScript
-](https://developers.arcgis.com/javascript/latest/) properties to initialize a [GeoJSONLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GeoJSONLayer.html) with the proper symbology, popup, labels, etc.
-
-```typescript
-const url = 'https://cityofvernonia.github.io/geospatial-data/floodplain-management/flood-zones.json';
-
-const geoJSONLayer = new GeoJSONLayer(await (await fetch(url, { cache: 'reload' })).json());
-
-map.add(geoJSONLayer);
-```
 
 ## Data
 
@@ -42,10 +27,6 @@ Columbia County tax map boundaries within and adjacent to Vernonia City Limits.
 ### [Tax Maps](tax-maps)
 
 Columbia County tax maps within and adjacent to Vernonia City Limits.
-
-## Data Changes
-
-See [Change Log](CHANGELOG).
 
 ---
 

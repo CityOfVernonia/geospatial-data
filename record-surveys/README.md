@@ -6,7 +6,7 @@ Columbia County record surveys and plats within the Vernonia spatial extent.
 
 **GeoJSONLayer JSON:** [surveys.json](surveys.json) ([preview](../preview.html?geojson=https%3A%2F%2Fcityofvernonia.github.io%2Fgeospatial-data%2Frecord-surveys%2Fsurveys.json))
 
-**Updated:** 2023.09.29
+**Updated:** 2025.08.12
 
 **Copyright:** Columbia County, Oregon and City of Vernonia, Oregon
 
