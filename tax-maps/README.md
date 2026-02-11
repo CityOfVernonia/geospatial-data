@@ -2,7 +2,7 @@
 
 Columbia County tax maps within and adjacent to Vernonia City Limits.
 
-Files are included as JPEGs and PDFs. JPEGs are georeferenced via the accompanying `*.aux.xml` file in spatial reference NAD 1983 (2011) Oregon Statewide Lambert (Intl Feet) _WKID 6557_.
+Files are included as JPEGs and PDFs. JPEGs are georeferenced via the accompanying `*.aux.xml` file in spatial reference NAD 1983 (2011) Oregon Statewide Lambert (Intl Feet) *WKID 6557*.
 
 | Tax Map |                PDF                 |                JPEG                |                    Georeference                    | Last Updated |
 | ------- | :--------------------------------: | :--------------------------------: | :------------------------------------------------: | :----------: |
@@ -26,7 +26,7 @@ Files are included as JPEGs and PDFs. JPEGs are georeferenced via the accompanyi
 | 4405    |   [4405.pdf](files/pdf/4405.pdf)   |   [4405.jpg](files/jpg/4405.jpg)   |   [4405.jpg.aux.xml](files/jpg/4405.jpg.aux.xml)   |     n/a      |
 | 4405AA  | [4405AA.pdf](files/pdf/4405AA.pdf) | [4405AA.jpg](files/jpg/4405AA.jpg) | [4405AA.jpg.aux.xml](files/jpg/4405AA.jpg.aux.xml) |  2024.05.06  |
 | 4405AC  | [4405AC.pdf](files/pdf/4405AC.pdf) | [4405AC.jpg](files/jpg/4405AC.jpg) | [4405AC.jpg.aux.xml](files/jpg/4405AC.jpg.aux.xml) |  2025.03.20  |
-| 4405AD  | [4405AD.pdf](files/pdf/4405AD.pdf) | [4405AD.jpg](files/jpg/4405AD.jpg) | [4405AD.jpg.aux.xml](files/jpg/4405AD.jpg.aux.xml) |  2025.03.20  |
+| 4405AD  | [4405AD.pdf](files/pdf/4405AD.pdf) | [4405AD.jpg](files/jpg/4405AD.jpg) | [4405AD.jpg.aux.xml](files/jpg/4405AD.jpg.aux.xml) |  2026.02.11  |
 | 4405DA  | [4405DA.pdf](files/pdf/4405DA.pdf) | [4405DA.jpg](files/jpg/4405DA.jpg) | [4405DA.jpg.aux.xml](files/jpg/4405DA.jpg.aux.xml) |  2025.07.17  |
 | 4405DD  | [4405DD.pdf](files/pdf/4405DD.pdf) | [4405DD.jpg](files/jpg/4405DD.jpg) | [4405DD.jpg.aux.xml](files/jpg/4405DD.jpg.aux.xml) |  2024.06.28  |
 | 4406    |   [4406.pdf](files/pdf/4406.pdf)   |   [4406.jpg](files/jpg/4406.jpg)   |   [4406.jpg.aux.xml](files/jpg/4406.jpg.aux.xml)   |  2025.06.04  |
@@ -58,7 +58,7 @@ npm run tax-maps
 
 Add `files/jpg` directory to a Pro project and add images to a map. Update georeference for any updated JPEGs.
 
----
+***
 
 The City of Vernonia is an Equal Opportunity Employer and Provider
 
