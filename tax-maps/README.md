@@ -9,7 +9,7 @@ Files are included as JPEGs and PDFs. JPEGs are georeferenced via the accompanyi
 | 4403    |   [4403.pdf](files/pdf/4403.pdf)   |   [4403.jpg](files/jpg/4403.jpg)   |   [4403.jpg.aux.xml](files/jpg/4403.jpg.aux.xml)   |  2025.04.14  |
 | 4403BA  | [4403BA.pdf](files/pdf/4403BA.pdf) | [4403BA.jpg](files/jpg/4403BA.jpg) | [4403BA.jpg.aux.xml](files/jpg/4403BA.jpg.aux.xml) |  2024.06.28  |
 | 4403BB  | [4403BB.pdf](files/pdf/4403BB.pdf) | [4403BB.jpg](files/jpg/4403BB.jpg) | [4403BB.jpg.aux.xml](files/jpg/4403BB.jpg.aux.xml) |  2024.06.18  |
-| 4403BC  | [4403BC.pdf](files/pdf/4403BC.pdf) | [4403BC.jpg](files/jpg/4403BC.jpg) | [4403BC.jpg.aux.xml](files/jpg/4403BC.jpg.aux.xml) |  2026.05.07  |
+| 4403BC  | [4403BC.pdf](files/pdf/4403BC.pdf) | [4403BC.jpg](files/jpg/4403BC.jpg) | [4403BC.jpg.aux.xml](files/jpg/4403BC.jpg.aux.xml) |  2026.05.28  |
 | 4403BD  | [4403BD.pdf](files/pdf/4403BD.pdf) | [4403BD.jpg](files/jpg/4403BD.jpg) | [4403BD.jpg.aux.xml](files/jpg/4403BD.jpg.aux.xml) |  2025.03.20  |
 | 4403CA  | [4403CA.pdf](files/pdf/4403CA.pdf) | [4403CA.jpg](files/jpg/4403CA.jpg) | [4403CA.jpg.aux.xml](files/jpg/4403CA.jpg.aux.xml) |     n/a      |
 | 4404    |   [4404.pdf](files/pdf/4404.pdf)   |   [4404.jpg](files/jpg/4404.jpg)   |   [4404.jpg.aux.xml](files/jpg/4404.jpg.aux.xml)   |  2023.06.05  |
