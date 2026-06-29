@@ -138,7 +138,11 @@ const processRecordSurvey = async (image) => {
 
   const url = `${SURVEY_URL}${image}`;
 
-  if (fileExtension.toLowerCase() !== 'tif' && fileExtension.toLowerCase() !== 'jpg') {
+  if (
+    fileExtension.toLowerCase() !== 'tif' &&
+    fileExtension.toLowerCase() !== 'jpg' &&
+    fileExtension.toLowerCase() !== 'pdf'
+  ) {
     console.log(chalk.red(`File extension ${fileExtension} is not supported (${image}).`));
 
     return;
@@ -152,6 +156,13 @@ const processRecordSurvey = async (image) => {
     const imageData = await download(url);
 
     await fs.writeFile(imageFile, imageData);
+
+    // pdf here
+    if (fileExtension.toLowerCase() === 'pdf') {
+      const pdf = await download(url);
+
+      await fs.writeFile(pdfFile, pdf);
+    }
 
     if (fileExtension.toLowerCase() === 'tif') {
       await execute(`tiff2pdf -z -o ${pdfFile} ${imageFile}`);

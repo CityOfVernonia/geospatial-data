@@ -5,7 +5,7 @@
     <MDI key="COMPRESSION">JPEG</MDI>
   </Metadata>
   <Metadata domain="xml:ESRI" format="xml">
-    <GeodataXform xsi:type="typens:PolynomialXform" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:typens="http://www.esri.com/schemas/ArcGIS/3.4.0">
+    <GeodataXform xsi:type="typens:PolynomialXform" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:typens="http://www.esri.com/schemas/ArcGIS/3.5.0">
       <PolynomialOrder>1</PolynomialOrder>
       <SpatialReference xsi:type="typens:ProjectedCoordinateSystem">
         <WKT>PROJCS["NAD_1983_2011_Oregon_Statewide_Lambert_Ft_Intl",GEOGCS["GCS_NAD_1983_2011",DATUM["D_NAD_1983_2011",SPHEROID["GRS_1980",6378137.0,298.257222101]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Lambert_Conformal_Conic"],PARAMETER["False_Easting",1312335.958005249],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",-120.5],PARAMETER["Standard_Parallel_1",43.0],PARAMETER["Standard_Parallel_2",45.5],PARAMETER["Latitude_Of_Origin",41.75],UNIT["Foot",0.3048],AUTHORITY["EPSG",6557]]</WKT>
@@ -24,14 +24,14 @@
         <LatestWKID>6557</LatestWKID>
       </SpatialReference>
       <SourceGCPs xsi:type="typens:ArrayOfDouble">
-        <Double>1836.4113809201708</Double>
-        <Double>-1018.0743842348456</Double>
-        <Double>9298.3749257962336</Double>
-        <Double>-9358.1600468847901</Double>
-        <Double>10557.357293916146</Double>
-        <Double>-2198.4243612196296</Double>
-        <Double>1563.8358413983383</Double>
-        <Double>-9033.0524781867862</Double>
+        <Double>1836.8946293097852</Double>
+        <Double>-973.94855308905244</Double>
+        <Double>9298.4799985979225</Double>
+        <Double>-9312.9981030933559</Double>
+        <Double>10556.950200929532</Double>
+        <Double>-2153.0588731076568</Double>
+        <Double>1563.4574496606542</Double>
+        <Double>-8987.9514814168215</Double>
       </SourceGCPs>
       <TargetGCPs xsi:type="typens:ArrayOfDouble">
         <Double>624148.49352455465</Double>
