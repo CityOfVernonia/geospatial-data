@@ -1,6 +1,6 @@
 # City of Vernonia Geospatial Data
 
-Relatively small and static (or very rarely updated) geospatial datasets and related data products for use in web applications to support of City business.
+Geospatial data processing and file hosting.
 
 ## Data
 
