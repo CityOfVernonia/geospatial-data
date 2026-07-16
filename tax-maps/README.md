@@ -2,6 +2,8 @@
 
 Columbia County tax maps within and adjacent to Vernonia City Limits.
 
+### Files
+
 Files are included as JPEGs and PDFs. JPEGs are georeferenced via the accompanying `*.aux.xml` file in spatial reference NAD 1983 (2011) Oregon Statewide Lambert (Intl Feet) _WKID 6557_.
 
 | Tax Map |                PDF                 |                JPEG                |                    Georeference                    | Last Updated |
