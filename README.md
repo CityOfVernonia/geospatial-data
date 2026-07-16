@@ -20,10 +20,6 @@ FEMA Letter of Map Amendments (LOMAs) within Vernonia City Limits.
 
 Columbia County record surveys within the Vernonia spatial extent.
 
-### [Tax Map Boundaries](tax-map-boundaries)
-
-Columbia County tax map boundaries within and adjacent to Vernonia City Limits.
-
 ### [Tax Maps](tax-maps)
 
 Columbia County tax maps within and adjacent to Vernonia City Limits.
