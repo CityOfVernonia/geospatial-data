@@ -1,7 +1,7 @@
 {
   "type": "module",
   "scripts": {
-    "city-annexations": "node _data-processing/city-annexations.js",
+    "annexations": "node _data-processing/annexations.ts",
     "flood-hazard": "node _data-processing/flood-hazard.js",
     "letter-of-map-amendments": "node _data-processing/letter-of-map-amendments.js",
     "record-surveys": "node _data-processing/record-surveys.js",
@@ -25,5 +25,9 @@
     "printWidth": 120,
     "tabWidth": 2,
     "endOfLine": "auto"
+  },
+  "devDependencies": {
+    "@types/command-exists": "^1.2.3",
+    "@types/fs-extra": "^11.0.4"
   }
 }
