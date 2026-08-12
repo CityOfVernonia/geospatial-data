@@ -4,9 +4,9 @@ Geospatial data processing and file hosting.
 
 ## Data
 
-### [City Annexations](city-annexations)
+### [Annexations](annexations)
 
-Annexations and de-annexations to the municipal boundary of Vernonia.
+City annexation files.
 
 ### [Elevation Certificates](elevation-certificates)
 
